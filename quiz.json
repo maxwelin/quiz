@@ -1,0 +1,104 @@
+{
+  "quiz": [
+    {
+      "question": "Which animal can hold its breath longer than a dolphin?",
+      "options": ["Sloth", "Turtle", "Seal", "Whale"],
+      "answer": "Sloth"
+    },
+    {
+      "question": "What is illegal to do with a goldfish in Switzerland?",
+      "options": ["Flush it down the toilet ", "Keep it alone", "Eat it", "Take it out of water for a photo"],
+      "answer": "Keep it alone"
+    },
+    {
+      "question": "What unusual feature do octopus hearts have?",
+      "options": ["They glow in the dark", "They pump blood backwards", "They have three hearts", "They stop beating when it rains"],
+      "answer": "They have three hearts"
+    },
+    {
+      "question": "What happens if you cut a starfish into pieces?",
+      "options": ["It grows back into one starfish", "Each piece becomes a new starfish", "It dissolves completely", "It releases toxins"],
+      "answer": "Each piece becomes a new starfish"
+    },
+    {
+      "question": "Which country once declared war on the ocean?",
+      "options": ["The Netherlands", "Japan", "Portugal", "Norway"],
+      "answer": "The Netherlands"
+    },
+    {
+      "question": "What strange effect can a wombat’s unique poop shape have?",
+      "options": ["It scares off predators", "It helps mark territory without rolling away", "It doubles as food storage", "It wards off insects"],
+      "answer": "It helps mark territory without rolling away"
+    },
+    {
+      "question": "Which food item can last indefinitely if stored properly?",
+      "options": ["Rice", "Salt", "Honey", "Sugar"],
+      "answer": "Honey"
+    },
+    {
+      "question": "Why do kangaroos have difficulty walking backwards?",
+      "options": ["Their tail and body structure prevent it", "They only hop", "Their knees are fused", "Their balance shifts forward"],
+      "answer": "Their tail and body structure prevent it"
+    },
+    {
+      "question": "What was used as a tea substitute in the U.S. during World War II?",
+      "options": ["Cabbage leaves", "Iced lettuce leaves", "Apple peels", "Corn husks"],
+      "answer": "Iced lettuce leaves"
+    },
+    {
+      "question": "Which planet in our solar system could float in water?",
+      "options": ["Jupiter", "Neptune", "Saturn", "Uranus"],
+      "answer": "Saturn"
+    },
+    {
+      "question": "What can jellyfish do that no other animal can?",
+      "options": ["Turn invisible", "Reverse aging", "Breathe without water", "Change color"],
+      "answer": "Reverse aging"
+    },
+    {
+      "question": "Which bird can mimic almost any sound, including chainsaws?",
+      "options": ["Lyrebird", "Parrot", "Crow", "Peacock"],
+      "answer": "Lyrebird"
+    },
+    {
+      "question": "What strange material were some medieval books bound in?",
+      "options": ["Human skin", "Horse hair", "Snake scales", "Tree bark"],
+      "answer": "Human skin"
+    },
+    {
+      "question": "What unique ability does the mantis shrimp have?",
+      "options": ["See 16 types of color", "Produce its own light", "Swim faster than a shark", "Freeze water with a punch"],
+      "answer": "See 16 types of color"
+    },
+    {
+      "question": "Which country has more sheep than people?",
+      "options": ["New Zealand", "Iceland", "Argentina", "Scotland"],
+      "answer": "New Zealand"
+    },
+    {
+      "question": "What can a cockroach live without for several days?",
+      "options": ["Its head", "Its legs", "Its stomach", "Its exoskeleton"],
+      "answer": "Its head"
+    },
+    {
+      "question": "What’s unique about bananas compared to most other fruits?",
+      "options": ["They are classified as berries", "They grow underground", "They don’t have seeds", "They are naturally square"],
+      "answer": "They are classified as berries"
+    },
+    {
+      "question": "What happens to flamingos if they don’t eat their special diet?",
+      "options": ["They turn white", "They stop flying", "They lose their beak color", "They shrink in size"],
+      "answer": "They turn white"
+    },
+    {
+      "question": "What animal has fingerprints nearly identical to humans?",
+      "options": ["Koalas", "Gorillas", "Tigers", "Raccoons"],
+      "answer": "Koalas"
+    },
+    {
+      "question": "Which everyday food was once considered a luxury item in Europe?",
+      "options": ["Potatoes", "Tomatoes", "Coffee", "Bread"],
+      "answer": "Potatoes"
+    }
+  ]
+}
