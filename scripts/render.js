@@ -1,6 +1,6 @@
 export default class Render{
   root = document.getElementById("root")
-  pageCount = 20
+  pageCount = 50
   
   createButtons = () => {
     const flipPageBtn = document.createElement("button")

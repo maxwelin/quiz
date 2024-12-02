@@ -1,104 +1,247 @@
-{
-  "quiz": [
-    {
-      "question": "Which animal can hold its breath longer than a dolphin?",
-      "options": ["Sloth", "Turtle", "Seal", "Whale"],
-      "answer": "Sloth"
-    },
-    {
-      "question": "What is illegal to do with a goldfish in Switzerland?",
-      "options": ["Flush it down the toilet ", "Keep it alone", "Eat it", "Take it out of water for a photo"],
-      "answer": "Keep it alone"
-    },
-    {
-      "question": "What unusual feature do octopus hearts have?",
-      "options": ["They glow in the dark", "They pump blood backwards", "They have three hearts", "They stop beating when it rains"],
-      "answer": "They have three hearts"
-    },
-    {
-      "question": "What happens if you cut a starfish into pieces?",
-      "options": ["It grows back into one starfish", "Each piece becomes a new starfish", "It dissolves completely", "It releases toxins"],
-      "answer": "Each piece becomes a new starfish"
-    },
-    {
-      "question": "Which country once declared war on the ocean?",
-      "options": ["The Netherlands", "Japan", "Portugal", "Norway"],
-      "answer": "The Netherlands"
-    },
-    {
-      "question": "What strange effect can a wombat’s unique poop shape have?",
-      "options": ["It scares off predators", "It helps mark territory without rolling away", "It doubles as food storage", "It wards off insects"],
-      "answer": "It helps mark territory without rolling away"
-    },
-    {
-      "question": "Which food item can last indefinitely if stored properly?",
-      "options": ["Rice", "Salt", "Honey", "Sugar"],
-      "answer": "Honey"
-    },
-    {
-      "question": "Why do kangaroos have difficulty walking backwards?",
-      "options": ["Their tail and body structure prevent it", "They only hop", "Their knees are fused", "Their balance shifts forward"],
-      "answer": "Their tail and body structure prevent it"
-    },
-    {
-      "question": "What was used as a tea substitute in the U.S. during World War II?",
-      "options": ["Cabbage leaves", "Iced lettuce leaves", "Apple peels", "Corn husks"],
-      "answer": "Iced lettuce leaves"
-    },
-    {
-      "question": "Which planet in our solar system could float in water?",
-      "options": ["Jupiter", "Neptune", "Saturn", "Uranus"],
-      "answer": "Saturn"
-    },
-    {
-      "question": "What can jellyfish do that no other animal can?",
-      "options": ["Turn invisible", "Reverse aging", "Breathe without water", "Change color"],
-      "answer": "Reverse aging"
-    },
-    {
-      "question": "Which bird can mimic almost any sound, including chainsaws?",
-      "options": ["Lyrebird", "Parrot", "Crow", "Peacock"],
-      "answer": "Lyrebird"
-    },
-    {
-      "question": "What strange material were some medieval books bound in?",
-      "options": ["Human skin", "Horse hair", "Snake scales", "Tree bark"],
-      "answer": "Human skin"
-    },
-    {
-      "question": "What unique ability does the mantis shrimp have?",
-      "options": ["See 16 types of color", "Produce its own light", "Swim faster than a shark", "Freeze water with a punch"],
-      "answer": "See 16 types of color"
-    },
-    {
-      "question": "Which country has more sheep than people?",
-      "options": ["New Zealand", "Iceland", "Argentina", "Scotland"],
-      "answer": "New Zealand"
-    },
-    {
-      "question": "What can a cockroach live without for several days?",
-      "options": ["Its head", "Its legs", "Its stomach", "Its exoskeleton"],
-      "answer": "Its head"
-    },
-    {
-      "question": "What’s unique about bananas compared to most other fruits?",
-      "options": ["They are classified as berries", "They grow underground", "They don’t have seeds", "They are naturally square"],
-      "answer": "They are classified as berries"
-    },
-    {
-      "question": "What happens to flamingos if they don’t eat their special diet?",
-      "options": ["They turn white", "They stop flying", "They lose their beak color", "They shrink in size"],
-      "answer": "They turn white"
-    },
-    {
-      "question": "What animal has fingerprints nearly identical to humans?",
-      "options": ["Koalas", "Gorillas", "Tigers", "Raccoons"],
-      "answer": "Koalas"
-    },
-    {
-      "question": "Which everyday food was once considered a luxury item in Europe?",
-      "options": ["Potatoes", "Tomatoes", "Coffee", "Bread"],
-      "answer": "Potatoes"
-    }
-  ]
-}
+[
+  {
+    "question": "What is the name of the toy cowboy in Toy Story?",
+    "options": ["Buzz Lightyear", "Woody", "Mr. Potato Head", "Slinky Dog"],
+    "answer": "Woody"
+  },
+  {
+    "question": "In which Disney movie does the character Elsa appear?",
+    "options": ["The Little Mermaid", "Frozen", "Beauty and the Beast", "Moana"],
+    "answer": "Frozen"
+  },
+  {
+    "question": "What is the name of the lion cub in The Lion King?",
+    "options": ["Simba", "Mufasa", "Nala", "Scar"],
+    "answer": "Simba"
+  },
+  {
+    "question": "Who is the fairy in Peter Pan?",
+    "options": ["Tinker Bell", "Cinderella", "Ariel", "Aurora"],
+    "answer": "Tinker Bell"
+  },
+  {
+    "question": "Which character is known for saying, 'Ohana means family'?",
+    "options": ["Lilo", "Simba", "Ariel", "Olaf"],
+    "answer": "Lilo"
+  },
+  {
+    "question": "Who is the main antagonist in the movie Sleeping Beauty?",
+    "options": ["Maleficent", "Ursula", "Scar", "Cruella de Vil"],
+    "answer": "Maleficent"
+  },
+  {
+    "question": "What is the name of the fish in Finding Nemo?",
+    "options": ["Dory", "Nemo", "Flounder", "Marlin"],
+    "answer": "Nemo"
+  },
+  {
+    "question": "Which Disney princess has a pet tiger named Rajah?",
+    "options": ["Ariel", "Jasmine", "Snow White", "Belle"],
+    "answer": "Jasmine"
+  },
+  {
+    "question": "What type of animal is Dumbo?",
+    "options": ["Elephant", "Horse", "Mouse", "Lion"],
+    "answer": "Elephant"
+  },
+  {
+    "question": "Which Disney princess is known for her glass slipper?",
+    "options": ["Cinderella", "Aurora", "Rapunzel", "Belle"],
+    "answer": "Cinderella"
+  },
+  {
+    "question": "Which animated film features the song 'Let It Go'?",
+    "options": ["Moana", "Frozen", "Tangled", "Beauty and the Beast"],
+    "answer": "Frozen"
+  },
+  {
+    "question": "In which movie would you find the character Lightning McQueen?",
+    "options": ["Cars", "The Incredibles", "Toy Story", "Ratatouille"],
+    "answer": "Cars"
+  },
+  {
+    "question": "Who is the princess in Beauty and the Beast?",
+    "options": ["Ariel", "Belle", "Cinderella", "Snow White"],
+    "answer": "Belle"
+  },
+  {
+    "question": "What is the name of the snowman in Frozen?",
+    "options": ["Olaf", "Sven", "Marshmallow", "Kristoff"],
+    "answer": "Olaf"
+  },
+  {
+    "question": "What is the name of Aladdin's monkey?",
+    "options": ["Abu", "Rajah", "Flounder", "Pascal"],
+    "answer": "Abu"
+  },
+  {
+    "question": "Which Disney movie features a character named Simba?",
+    "options": ["The Lion King", "Aladdin", "Mulan", "Pocahontas"],
+    "answer": "The Lion King"
+  },
+  {
+    "question": "In which movie does the character Mulan appear?",
+    "options": ["Mulan", "Cinderella", "The Little Mermaid", "Pocahontas"],
+    "answer": "Mulan"
+  },
+  {
+    "question": "What color is Elsa's dress in the movie Frozen?",
+    "options": ["Blue", "Green", "Red", "Purple"],
+    "answer": "Blue"
+  },
+  {
+    "question": "Which character says, 'To infinity and beyond!'?",
+    "options": ["Woody", "Buzz Lightyear", "Mr. Potato Head", "Slinky Dog"],
+    "answer": "Buzz Lightyear"
+  },
+  {
+    "question": "What animal is Baloo in The Jungle Book?",
+    "options": ["Bear", "Lion", "Monkey", "Elephant"],
+    "answer": "Bear"
+  },
+  {
+    "question": "What is the name of the whale in Pinocchio?",
+    "options": ["Monstro", "Moby", "Shamu", "Fluke"],
+    "answer": "Monstro"
+  },
+  {
+    "question": "Which Disney princess has a pet chameleon named Pascal?",
+    "options": ["Rapunzel", "Ariel", "Aurora", "Snow White"],
+    "answer": "Rapunzel"
+  },
+  {
+    "question": "What is the name of the street rat in Aladdin?",
+    "options": ["Aladdin", "Jafar", "Genie", "Abu"],
+    "answer": "Aladdin"
+  },
+  {
+    "question": "In which Disney movie is the character 'Cruz Ramirez' featured?",
+    "options": ["Cars 3", "Cars 2", "Cars", "Finding Dory"],
+    "answer": "Cars 3"
+  },
+  {
+    "question": "What is the name of the dog in Lady and the Tramp?",
+    "options": ["Tramp", "Bolt", "Dug", "Poochie"],
+    "answer": "Tramp"
+  },
+  {
+    "question": "Who are the parents of the twins in The Incredibles?",
+    "options": ["Helen and Bob Parr", "Fred and Mary Parr", "Dash and Violet", "Lucius and Edna"],
+    "answer": "Helen and Bob Parr"
+  },
+  {
+    "question": "What is the name of the bear in The Jungle Book?",
+    "options": ["Baloo", "Bagheera", "Shere Khan", "Kaa"],
+    "answer": "Baloo"
+  },
+  {
+    "question": "What is the name of the villain in 101 Dalmatians?",
+    "options": ["Cruella de Vil", "Maleficent", "Ursula", "Scar"],
+    "answer": "Cruella de Vil"
+  },
+  {
+    "question": "Which movie features a character named Pocahontas?",
+    "options": ["Pocahontas", "Mulan", "Brave", "Aladdin"],
+    "answer": "Pocahontas"
+  },
+  {
+    "question": "Which character is famous for saying, 'Hakuna Matata'?",
+    "options": ["Simba", "Timon", "Pumbaa", "Rafiki"],
+    "answer": "Pumbaa"
+  },
+  {
+    "question": "Which Disney character is known for having a magic carpet?",
+    "options": ["Jasmine", "Ariel", "Belle", "Cinderella"],
+    "answer": "Jasmine"
+  },
+  {
+    "question": "What is the name of the city in The Incredibles?",
+    "options": ["Metroville", "Incredipolis", "Supercity", "Villopolis"],
+    "answer": "Metroville"
+  },
+  {
+    "question": "What animal is the sidekick of Timon in The Lion King?",
+    "options": ["Meerkat", "Turtle", "Hog", "Zebra"],
+    "answer": "Meerkat"
+  },
+  {
+    "question": "Who is the villain in The Little Mermaid?",
+    "options": ["Ursula", "Maleficent", "Scar", "Cruella de Vil"],
+    "answer": "Ursula"
+  },
+  {
+    "question": "Which Disney movie features a character named Woody?",
+    "options": ["Toy Story", "Monsters Inc.", "Finding Nemo", "Cars"],
+    "answer": "Toy Story"
+  },
+  {
+    "question": "Which princess is known for her long, magical hair?",
+    "options": ["Rapunzel", "Cinderella", "Ariel", "Belle"],
+    "answer": "Rapunzel"
+  },
+  {
+    "question": "In which movie would you find the character 'Scar'?",
+    "options": ["The Lion King", "Mulan", "Frozen", "Pocahontas"],
+    "answer": "The Lion King"
+  },
+  {
+    "question": "What animal is Dumbo's best friend?",
+    "options": ["Mouse", "Bird", "Tiger", "Elephant"],
+    "answer": "Mouse"
+  },
+  {
+    "question": "Which Disney movie has the song 'Under the Sea'?",
+    "options": ["The Little Mermaid", "Pocahontas", "Beauty and the Beast", "Aladdin"],
+    "answer": "The Little Mermaid"
+  },
+  {
+    "question": "Which Disney princess was cursed to sleep for 100 years?",
+    "options": ["Snow White", "Cinderella", "Sleeping Beauty", "Ariel"],
+    "answer": "Sleeping Beauty"
+  },
+  {
+    "question": "Who is the main character in Moana?",
+    "options": ["Moana", "Ariel", "Jasmine", "Mulan"],
+    "answer": "Moana"
+  },
+  {
+    "question": "Which Disney movie features a character named Elsa?",
+    "options": ["Frozen", "Tangled", "Brave", "Mulan"],
+    "answer": "Frozen"
+  },
+  {
+    "question": "Who is the villain in Aladdin?",
+    "options": ["Jafar", "Scar", "Ursula", "Maleficent"],
+    "answer": "Jafar"
+  },
+  {
+    "question": "What is the name of the dog in The Fox and the Hound?",
+    "options": ["Copper", "Tramp", "Balto", "Bolt"],
+    "answer": "Copper"
+  },
+  {
+    "question": "Who is the main character in the movie Tangled?",
+    "options": ["Ariel", "Rapunzel", "Belle", "Aurora"],
+    "answer": "Rapunzel"
+  },
+  {
+    "question": "What does the magic lamp in Aladdin contain?",
+    "options": ["A genie", "A fairy", "A wizard", "A princess"],
+    "answer": "A genie"
+  },
+  {
+    "question": "What is the name of the princess in The Princess and the Frog?",
+    "options": ["Tiana", "Ariel", "Rapunzel", "Cinderella"],
+    "answer": "Tiana"
+  },
+  {
+    "question": "What is the name of Simba's best friend in The Lion King?",
+    "options": ["Pumbaa", "Timon", "Nala", "Zazu"],
+    "answer": "Nala"
+  },
+  {
+    "question": "Which character says, 'Just keep swimming'?",
+    "options": ["Marlin", "Dory", "Nemo", "Squirt"],
+    "answer": "Dory"
+  }
+]
