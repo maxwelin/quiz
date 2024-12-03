@@ -11,24 +11,69 @@
 }
 
 #book{
+  position: relative;
   display: grid;
   grid-template-columns: 400px 40px;
-  grid-template-rows: 40px 600px 40px;
+  grid-template-rows: 10px 600px 10px;
   background-color: brown;
   border-left: 2px solid black;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   max-width: 500px;
-  max-height: 700px;
   transform: rotateY(0);
   transform-origin: left;
-  transition: transform 0.6s ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-top:1px solid black;
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+}
+
+#book:after {
+  background-color: gray;
+  bottom: 0;
+  content: '';
+  left: -50px;
+  position: absolute;
+  top: -1px;
+  width: 40px;
+  height: 618px;
+  z-index: -10000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-top:2px solid black;
+  border-left:2px solid black;
+  border-bottom:2px solid black;
+  border-right:10px solid rgb(0, 0, 0);
+}
+
+#cover::after {
+  background-color: black;
+  bottom: 0;
+  content: '';
+  left: -20px;
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  height: 622px;
+  z-index: -1000;
+  visibility: var(--after-visibility, hidden);
+}
+
+#cover::before {
+  background-color: black;
+  bottom: 0;
+  content: '';
+  left: 0px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  z-index: -1000;
+  visibility: var(--after-visibility, hidden);
 }
 
 #cover{
   max-width: 100%;
   max-height: 100%;
-  background-color: black;
+  background-color: gray;
   color: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -38,7 +83,11 @@
   grid-column-end: 3;
   z-index: 1;
   transform-origin: left;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-top:1px solid black;
+  border-right:1px solid black;
+  border-bottom:1px solid black;
 }
 
 #title{
@@ -50,18 +99,18 @@
 }
 
 .page{
+  position: relative;
   width: 400px;
   height: 600px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(240, 216, 161, 0.95));
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1), 1px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1), 4px 3px 5px rgba(0, 0, 0, 0.1);
   color: black;
   grid-row-start: 2;
   grid-column-start: 1;
   transform: rotateY(0);
   transform-origin: left;
-  transition: transform 0.6s ease-in-out;
 }
 
 .page p{
@@ -71,6 +120,16 @@
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.page label{
+  padding: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-bottom: 10px;
 }
 
 .page:before{
@@ -88,6 +147,7 @@
 .flip{
   transform: translateX(-2px) rotateY(-180deg);
   user-select: none;
+  transition: transform 0.6s ease-in-out;
 }
 
 .flipped{
@@ -112,4 +172,45 @@
 .hidden{
   visibility: hidden;
   pointer-events: none;
+}
+
+.answer-form{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.submit-btn{
+  margin-top: 20px;
+  font-family: "EB Garamond", serif;
+  font-size: 1.2em;
+  font-optical-sizing: auto;
+  font-style: normal;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.submit-btn:hover{
+  transform: scale(1.05);
+}
+
+label:has(input[type="radio"]:checked) {
+  font-weight: bold;
+}
+
+label {
+  cursor: pointer;
+}
+
+.page img{
+  opacity: 0.15;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 100%;
+  user-select: none;
+  z-index: -1;
+  object-fit: cover;
 }

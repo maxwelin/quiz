@@ -1,16 +1,41 @@
-import Fetch from "./fetch.js"
+import FetchService from "./fetchService.js"
 import Render from "./render.js"
+import FormValidator from "./formValidator.js"
 
-const fetch = new Fetch()
-const render = new Render()
+const formValidator = new FormValidator()
+const fetch = new FetchService()
+const render = new Render(formValidator)
 
 render.createButtons()
 render.createBook()
 
+
+function getRandomQuizQuestion(){
+  let questionsToRender = []
+  while(questionsToRender.length < 10){
+    
+    let rnd = Math.floor(Math.random()*48) + 1
+    let exists = false
+  
+    for (let i = 0; i < 10; i++) {
+      if(questionsToRender[i] == rnd){
+        exists = true
+      }
+    }
+    if(!exists){
+      questionsToRender.push(rnd)
+    }
+  }
+  return questionsToRender
+}
+
 fetch.fetchQuiz().then((quiz) => {
   console.log(quiz)
-  for (let i = 0; i < quiz.length; i++) {
-    render.createPage(quiz[i].question, quiz[i].options, quiz[i].answer)
+  const randomQuestions = getRandomQuizQuestion()
+  console.log(randomQuestions)
+  for (let i = 0; i < 10; i++) {
+    let rnd = randomQuestions[i]
+    render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[6].img)
   }
   render.createInstructionPage("välkommen till skitroligt och extremt svårt quiz\n\n\nSkriv instruktioner här")
   render.createCover()
