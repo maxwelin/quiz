@@ -27,17 +27,22 @@ export default class Render{
   createBook = () => {
     const book = document.createElement("div")
     book.setAttribute("id", "book")
+    const img = document.createElement("img")
     this.root.appendChild(book)
   }
 
   createCover = () => {
     const cover = document.createElement("div")
-    const title = document.createElement("p")
+    const title = document.createElement("h1")
+    const p = document.createElement("p")
+    const img = document.createElement("img")
+    img.setAttribute("src", "https://www.nhmagazine.com/content/uploads/2021/02/disney-castle-scaled.jpg")
     cover.setAttribute("id", "cover")
     title.setAttribute("id", "title")
-    title.innerText = "wow jätteroligt quiz du vill verkligen inte missa det här"
+    title.innerText = "DISNEY QUIZ"
+    p.innerText = "Quizney??"
 
-    cover.appendChild(title)
+    cover.append(title, img, p)
     document.getElementById("book").appendChild(cover)
   }
   
@@ -47,6 +52,7 @@ export default class Render{
     setTimeout(() => {
       cover.classList.add("flipped")
       document.querySelector("#cover").style.setProperty('--after-visibility', 'visible');
+      document.querySelector("#cover p").style.visibility = "hidden"
     }, 150)
     document.getElementById("open").remove()
     document.getElementById("next").classList.remove("hidden")
