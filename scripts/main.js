@@ -35,7 +35,7 @@ fetch.fetchQuiz().then((quiz) => {
   console.log(randomQuestions)
   for (let i = 0; i < 10; i++) {
     let rnd = randomQuestions[i]
-    render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[6].img)
+    render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img)
   }
   render.createInstructionPage("välkommen till skitroligt och extremt svårt quiz\n\n\nSkriv instruktioner här")
   render.createCover()

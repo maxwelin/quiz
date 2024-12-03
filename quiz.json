@@ -21,7 +21,7 @@
     "question": "Who is the fairy in Peter Pan?",
     "options": ["Tinker Bell", "Cinderella", "Ariel", "Aurora"],
     "answer": "Tinker Bell",
-    "img": "https://superawesomevectors.com/wp-content/uploads/2023/10/tinker-bell-from-peter-pan-vector.jpg"
+    "img": "./img/tinkerbell.jpg"
   },
   {
     "question": "Which character is known for saying, 'Ohana means family'?",
@@ -39,258 +39,258 @@
     "question": "What is the name of the fish in Finding ___?",
     "options": ["Dory", "Nemo", "Flounder", "Marlin"],
     "answer": "Nemo",
-    "img": "https://i.pinimg.com/originals/02/f4/5b/02f45bac46c44e57af65e522ec5b77c5.gif"
+    "img": "https://u-mercari-images.mercdn.net/photos/m18022227018_1.jpg?width=512&height=512&format=pjpg&auto=webp&fit=crop&_=1711847280"
   },
   {
     "question": "Which Disney princess has a pet tiger named Rajah?",
     "options": ["Ariel", "Jasmine", "Snow White", "Belle"],
     "answer": "Jasmine",
-    "img": ""
+    "img": "https://i.pinimg.com/474x/d6/5c/27/d65c274d98021c18263715e5c9dd511a.jpg"
   },
   {
     "question": "What type of animal is Dumbo?",
     "options": ["Elephant", "Horse", "Mouse", "Lion"],
     "answer": "Elephant",
-    "img": ""
+    "img": "https://image-resizing.booztcdn.com/simba-toys/sts6315876245_cblue.webp?has_grey=1&has_webp=0&dpr=2.5&size=w400"
   },
   {
     "question": "Which Disney princess is known for her glass slipper?",
     "options": ["Cinderella", "Aurora", "Rapunzel", "Belle"],
     "answer": "Cinderella",
-    "img": ""
+    "img": "https://media.wondercity.com/images/product/9171/18276/LzIEbc4lWwp3lyWwquv3CjeOWdmog3-metaNjAxMzM5NyAoMSkuanBn-.jpg"
   },
   {
     "question": "Which animated film features the song 'Let It Go'?",
     "options": ["Moana", "Frozen", "Tangled", "Beauty and the Beast"],
     "answer": "Frozen",
-    "img": ""
+    "img": "https://thumbs.dreamstime.com/b/question-marks-cartoon-multicolor-illustration-faq-help-interrogation-signs-hand-drawn-element-140114221.jpg"
   },
   {
     "question": "In which movie would you find the character Lightning McQueen?",
     "options": ["Cars", "The Incredibles", "Toy Story", "Ratatouille"],
     "answer": "Cars",
-    "img": ""
+    "img": "https://cdn11.bigcommerce.com/s-36f0xn7qz3/images/stencil/original/products/1090/3349/2424_LightningMcQueen_C3_34__17709__49478.1675710497.jpg?c=1"
   },
   {
     "question": "Who is the princess in Beauty and the Beast?",
     "options": ["Ariel", "Belle", "Cinderella", "Snow White"],
     "answer": "Belle",
-    "img": ""
+    "img": "https://i.pinimg.com/736x/9c/8b/a3/9c8ba3021fc08219fed0781fde6c1852.jpg"
   },
   {
     "question": "What is the name of the snowman in Frozen?",
     "options": ["Olaf", "Sven", "Marshmallow", "Kristoff"],
     "answer": "Olaf",
-    "img": ""
+    "img": "https://wallpapers-clan.com/wp-content/uploads/2024/07/frozen-olaf-cute-disney-snowman-art-wallpaper-preview.jpg"
   },
   {
     "question": "What is the name of Aladdin's monkey?",
     "options": ["Abu", "Rajah", "Flounder", "Pascal"],
     "answer": "Abu",
-    "img": ""
+    "img": "https://www.disneyclips.com/images/images/abu-magic-lamp.png"
   },
   {
     "question": "Which Disney movie features a character named Simba?",
     "options": ["The Lion King", "Aladdin", "Mulan", "Pocahontas"],
     "answer": "The Lion King",
-    "img": ""
+    "img": "https://i.ebayimg.com/images/g/jZcAAOSw91NTunas/s-l1200.jpg"
   },
   {
     "question": "In which movie does the character Mulan appear?",
     "options": ["Mulan", "Cinderella", "The Little Mermaid", "Pocahontas"],
     "answer": "Mulan",
-    "img": ""
+    "img": "https://cdn11.bigcommerce.com/s-qc6bb7/images/stencil/1280x1280/products/15680/45947/QXD6299__50332.1721328788.jpg?c=2"
   },
   {
     "question": "What color is Elsa's dress in the movie Frozen?",
     "options": ["Blue", "Green", "Red", "Purple"],
     "answer": "Blue",
-    "img": ""
+    "img": "https://i.etsystatic.com/52328914/r/il/c2a71f/6032497575/il_fullxfull.6032497575_ht3q.jpg"
   },
   {
     "question": "Which character says, 'To infinity and beyond!'?",
     "options": ["Woody", "Buzz Lightyear", "Mr. Potato Head", "Slinky Dog"],
     "answer": "Buzz Lightyear",
-    "img": ""
+    "img": "https://i.pinimg.com/564x/7d/f9/0d/7df90dcec52e75080c0853696bd63a51.jpg"
   },
   {
     "question": "What animal is Baloo in The Jungle Book?",
     "options": ["Bear", "Lion", "Monkey", "Elephant"],
     "answer": "Bear",
-    "img": ""
+    "img": "https://ih1.redbubble.net/image.1367652421.5795/st,small,507x507-pad,600x600,f8f8f8.jpg"
   },
   {
     "question": "What is the name of the whale in Pinocchio?",
     "options": ["Monstro", "Moby", "Shamu", "Fluke"],
     "answer": "Monstro",
-    "img": ""
+    "img": "https://static.wikia.nocookie.net/jack-millers-webpage-of-disney/images/f/f5/Pinocchio.png/revision/latest?cb=20151130021951"
   },
   {
     "question": "Which Disney princess has a pet chameleon named Pascal?",
     "options": ["Rapunzel", "Ariel", "Aurora", "Snow White"],
     "answer": "Rapunzel",
-    "img": ""
+    "img": "https://i.pinimg.com/originals/6b/4e/46/6b4e463c478e2c0b637d0da439a19e23.png"
   },
   {
-    "question": "What is the name of the street rat in Aladdin?",
+    "question": "What is the name of the so called street rat in Aladdin?",
     "options": ["Aladdin", "Jafar", "Genie", "Abu"],
     "answer": "Aladdin",
-    "img": ""
+    "img": "https://media.istockphoto.com/id/1132395683/vector/cute-mouse-cartoon-presenting.jpg?s=612x612&w=0&k=20&c=d221Xda14VxBOlJiPkHiQgucDzH8W5RR4WGu_eFp_PU="
   },
   {
     "question": "In which Disney movie is the character 'Cruz Ramirez' featured?",
     "options": ["Cars 3", "Cars 2", "Cars", "Finding Dory"],
     "answer": "Cars 3",
-    "img": ""
+    "img": "https://ih1.redbubble.net/image.389381522.9522/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u5.jpg"
   },
   {
     "question": "What is the name of the dog in Lady and the Tramp?",
     "options": ["Tramp", "Bolt", "Dug", "Poochie"],
     "answer": "Tramp",
-    "img": ""
+    "img": "https://i.pinimg.com/564x/09/fb/be/09fbbe2d741b748a86c09b6cb8dfdb41.jpg"
   },
   {
     "question": "Who are the parents of the twins in The Incredibles?",
     "options": ["Helen and Bob Parr", "Fred and Mary Parr", "Dash and Violet", "Lucius and Edna"],
     "answer": "Helen and Bob Parr",
-    "img": ""
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-V-NTl2E8P2-1Vd69goHnlN_w6SZxEp5F_wAEuk8eLXSDcgSN40q2KUvi7w9u8vVPo4U&usqp=CAU"
   },
   {
     "question": "What is the name of the bear in The Jungle Book?",
     "options": ["Baloo", "Bagheera", "Shere Khan", "Kaa"],
     "answer": "Baloo",
-    "img": ""
+    "img": "https://ih1.redbubble.net/image.1367652421.5795/st,small,507x507-pad,600x600,f8f8f8.jpg"
   },
   {
     "question": "What is the name of the villain in 101 Dalmatians?",
     "options": ["Cruella de Vil", "Maleficent", "Ursula", "Scar"],
     "answer": "Cruella de Vil",
-    "img": ""
+    "img": "https://ih1.redbubble.net/image.411129167.3054/flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg"
   },
   {
     "question": "Which movie features a character named Pocahontas?",
     "options": ["Pocahontas", "Mulan", "Brave", "Aladdin"],
     "answer": "Pocahontas",
-    "img": ""
+    "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e647605a-8e2c-4ed7-98ae-754a8d672b6a/dgf6rh9-6b808382-364f-4801-8930-e5f86c76113c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U2NDc2MDVhLThlMmMtNGVkNy05OGFlLTc1NGE4ZDY3MmI2YVwvZGdmNnJoOS02YjgwODM4Mi0zNjRmLTQ4MDEtODkzMC1lNWY4NmM3NjExM2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OHn19pRTg-8ye3Grziai2nHvkPKIhY7XLAoWiCdInkE"
   },
   {
     "question": "Which character is famous for saying, 'Hakuna Matata'?",
     "options": ["Simba", "Timon", "Pumbaa", "Rafiki"],
     "answer": "Pumbaa",
-    "img": ""
+    "img": "./img/lionking.jpg"
   },
   {
     "question": "Which Disney character is known for having a magic carpet?",
     "options": ["Jasmine", "Ariel", "Belle", "Cinderella"],
     "answer": "Jasmine",
-    "img": ""
+    "img": "https://i.pinimg.com/736x/92/4e/8d/924e8d22de3eb19a420788917b8e1b62.jpg"
   },
   {
     "question": "What is the name of the city in The Incredibles?",
     "options": ["Metroville", "Incredipolis", "Supercity", "Villopolis"],
     "answer": "Metroville",
-    "img": ""
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VLUmzhDEkGMa5LTRpEh6yhKSQZ2C36IrnKriUDYlnvqnyt1JvPoTJc2fhipeVRIZb-8&usqp=CAU"
   },
   {
     "question": "What animal is the sidekick of Timon in The Lion King?",
     "options": ["Meerkat", "Turtle", "Hog", "Zebra"],
     "answer": "Meerkat",
-    "img": ""
+    "img": "./img/lionking.jpg"
   },
   {
     "question": "Who is the villain in The Little Mermaid?",
     "options": ["Ursula", "Maleficent", "Scar", "Cruella de Vil"],
     "answer": "Ursula",
-    "img": ""
+    "img": "https://i0.wp.com/thevibewithky.com/wp-content/uploads/2023/09/The-Vibe-With-Ky-Blog-Image.png?resize=1200%2C720&ssl=1"
   },
   {
     "question": "Which Disney movie features a character named Woody?",
     "options": ["Toy Story", "Monsters Inc.", "Finding Nemo", "Cars"],
     "answer": "Toy Story",
-    "img": ""
+    "img": "https://dreamlightvalleywiki.com/images/2/25/Woody.png"
   },
   {
     "question": "Which princess is known for her long, magical hair?",
     "options": ["Rapunzel", "Cinderella", "Ariel", "Belle"],
     "answer": "Rapunzel",
-    "img": ""
+    "img": "https://w0.peakpx.com/wallpaper/958/515/HD-wallpaper-tangled-rapunzel-new-rapunzel-tangled-thumbnail.jpg"
   },
   {
     "question": "In which movie would you find the character 'Scar'?",
     "options": ["The Lion King", "Mulan", "Frozen", "Pocahontas"],
     "answer": "The Lion King",
-    "img": ""
+    "img": "./img/scar.jpg"
   },
   {
     "question": "What animal is Dumbo's best friend?",
     "options": ["Mouse", "Bird", "Tiger", "Elephant"],
     "answer": "Mouse",
-    "img": ""
+    "img": "https://ih1.redbubble.net/image.1355996906.5776/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
   },
   {
     "question": "Which Disney movie has the song 'Under the Sea'?",
     "options": ["The Little Mermaid", "Pocahontas", "Beauty and the Beast", "Aladdin"],
     "answer": "The Little Mermaid",
-    "img": ""
+    "img": "https://thumbs.dreamstime.com/b/question-marks-cartoon-multicolor-illustration-faq-help-interrogation-signs-hand-drawn-element-140114221.jpg"
   },
   {
     "question": "Which Disney princess was cursed to sleep for 100 years?",
     "options": ["Snow White", "Cinderella", "Sleeping Beauty", "Ariel"],
     "answer": "Sleeping Beauty",
-    "img": ""
+    "img": "https://csrcollectibles.com/wp-content/uploads/2024/05/marycosta4.jpg"
   },
   {
     "question": "Who is the main character in Moana?",
     "options": ["Moana", "Ariel", "Jasmine", "Mulan"],
     "answer": "Moana",
-    "img": ""
+    "img": "https://www.pngplay.com/wp-content/uploads/12/Moana-Disney-PNG-Clipart-Background.png"
   },
   {
     "question": "Which Disney movie features a character named Elsa?",
     "options": ["Frozen", "Tangled", "Brave", "Mulan"],
     "answer": "Frozen",
-    "img": ""
+    "img": "https://i.pinimg.com/736x/88/b0/7e/88b07e62286e040d72d55b133fff0d1a.jpg"
   },
   {
     "question": "Who is the villain in Aladdin?",
     "options": ["Jafar", "Scar", "Ursula", "Maleficent"],
     "answer": "Jafar",
-    "img": ""
+    "img": "https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/1690599064_Jafar8.png&width=600&height=600&quality=90&format=auto&fit=pad"
   },
   {
     "question": "What is the name of the dog in The Fox and the Hound?",
     "options": ["Copper", "Tramp", "Balto", "Bolt"],
     "answer": "Copper",
-    "img": ""
+    "img": "./img/copper.png"
   },
   {
     "question": "Who is the main character in the movie Tangled?",
     "options": ["Ariel", "Rapunzel", "Belle", "Aurora"],
     "answer": "Rapunzel",
-    "img": ""
+    "img": "https://images.fineartamerica.com/images/artworkimages/medium/3/disney-tangled-classic-title-logo-suyaod-laine-transparent.png"
   },
   {
     "question": "What does the magic lamp in Aladdin contain?",
     "options": ["A genie", "A fairy", "A wizard", "A princess"],
     "answer": "A genie",
-    "img": ""
+    "img": "https://i.pinimg.com/originals/6f/2f/c2/6f2fc2b996e45d05d355432919894b8c.png"
   },
   {
     "question": "What is the name of the princess in The Princess and the Frog?",
     "options": ["Tiana", "Ariel", "Rapunzel", "Cinderella"],
     "answer": "Tiana",
-    "img": ""
+    "img": "https://mystickermania.com/cdn/stickers/cartoons/princess-tiana-frog-512x512.png"
   },
   {
     "question": "What is the name of Simba's best friend in The Lion King?",
     "options": ["Pumbaa", "Timon", "Nala", "Zazu"],
     "answer": "Nala",
-    "img": ""
+    "img": "https://i.pinimg.com/736x/09/26/f7/0926f7f2d9c989b9cae4a8c2bb8acdc8.jpg"
   },
   {
     "question": "Which character says, 'Just keep swimming'?",
     "options": ["Marlin", "Dory", "Nemo", "Squirt"],
     "answer": "Dory",
-    "img": ""
+    "img": "https://u-mercari-images.mercdn.net/photos/m18022227018_1.jpg?width=512&height=512&format=pjpg&auto=webp&fit=crop&_=1711847280"
   }
 ]
