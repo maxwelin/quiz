@@ -33,11 +33,11 @@ fetch.fetchQuiz().then((quiz) => {
   console.log(quiz)
   const randomQuestions = getRandomQuizQuestion()
   console.log(randomQuestions)
+  render.createInstructionPage("scorescreen??")
   for (let i = 0; i < 10; i++) {
     let rnd = randomQuestions[i]
-    render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img)
+    render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img, [i])
   }
-  render.createInstructionPage("Någon typ av introduktionstext här..")
   render.createCover()
 })
 

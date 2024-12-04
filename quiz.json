@@ -19,19 +19,19 @@
   },
   {
     "question": "Who is the fairy in Peter Pan?",
-    "options": ["Tinker Bell", "Cinderella", "Ariel", "Aurora"],
+    "options": ["Ariel", "Cinderella", "Tinker Bell", "Aurora"],
     "answer": "Tinker Bell",
     "img": "./img/tinkerbell.jpg"
   },
   {
     "question": "Which character is known for saying, 'Ohana means family'?",
-    "options": ["Lilo", "Simba", "Ariel", "Olaf"],
+    "options": ["Olaf", "Simba", "Ariel", "Lilo"],
     "answer": "Lilo",
     "img": "https://i.etsystatic.com/47233908/r/il/e83b62/6124433664/il_794xN.6124433664_h7vb.jpg"
   },
   {
     "question": "Who is the main antagonist in the movie Sleeping Beauty?",
-    "options": ["Maleficent", "Ursula", "Scar", "Cruella de Vil"],
+    "options": ["Ursula", "Maleficent", "Scar", "Cruella de Vil"],
     "answer": "Maleficent",
     "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/480cf1e8-bb6a-41e7-980b-9b581fe7140f/dex3i27-bbf8f534-9de3-4be7-8e10-fe30a4c10906.png/v1/fill/w_1280,h_1630/princess_aurora_in_blue__18_by_mermaidmelodyedits_dex3i27-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYzMCIsInBhdGgiOiJcL2ZcLzQ4MGNmMWU4LWJiNmEtNDFlNy05ODBiLTliNTgxZmU3MTQwZlwvZGV4M2kyNy1iYmY4ZjUzNC05ZGUzLTRiZTctOGUxMC1mZTMwYTRjMTA5MDYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.al_e_1_b1g6TaJej28gmTn6EELd525mrbKEA63TQSJc"
   },
@@ -55,7 +55,7 @@
   },
   {
     "question": "Which Disney princess is known for her glass slipper?",
-    "options": ["Cinderella", "Aurora", "Rapunzel", "Belle"],
+    "options": ["Rapunzel", "Aurora", "Cinderella", "Belle"],
     "answer": "Cinderella",
     "img": "https://media.wondercity.com/images/product/9171/18276/LzIEbc4lWwp3lyWwquv3CjeOWdmog3-metaNjAxMzM5NyAoMSkuanBn-.jpg"
   },
@@ -79,19 +79,19 @@
   },
   {
     "question": "What is the name of the snowman in Frozen?",
-    "options": ["Olaf", "Sven", "Marshmallow", "Kristoff"],
+    "options": ["Kristoff", "Sven", "Marshmallow", "Olaf"],
     "answer": "Olaf",
     "img": "https://wallpapers-clan.com/wp-content/uploads/2024/07/frozen-olaf-cute-disney-snowman-art-wallpaper-preview.jpg"
   },
   {
     "question": "What is the name of Aladdin's monkey?",
-    "options": ["Abu", "Rajah", "Flounder", "Pascal"],
+    "options": ["Rajah", "Abu", "Flounder", "Pascal"],
     "answer": "Abu",
     "img": "https://www.disneyclips.com/images/images/abu-magic-lamp.png"
   },
   {
     "question": "Which Disney movie features a character named Simba?",
-    "options": ["The Lion King", "Aladdin", "Mulan", "Pocahontas"],
+    "options": ["Mulan", "Aladdin", "The Lion King", "Pocahontas"],
     "answer": "The Lion King",
     "img": "https://i.ebayimg.com/images/g/jZcAAOSw91NTunas/s-l1200.jpg"
   },
@@ -103,7 +103,7 @@
   },
   {
     "question": "What color is Elsa's dress in the movie Frozen?",
-    "options": ["Blue", "Green", "Red", "Purple"],
+    "options": ["Green", "Purple", "Red", "Blue"],
     "answer": "Blue",
     "img": "https://i.etsystatic.com/52328914/r/il/c2a71f/6032497575/il_fullxfull.6032497575_ht3q.jpg"
   },
@@ -123,7 +123,7 @@
     "question": "What is the name of the whale in Pinocchio?",
     "options": ["Monstro", "Moby", "Shamu", "Fluke"],
     "answer": "Monstro",
-    "img": "https://static.wikia.nocookie.net/jack-millers-webpage-of-disney/images/f/f5/Pinocchio.png/revision/latest?cb=20151130021951"
+    "img": "https://i.pinimg.com/564x/b3/17/df/b317df8f5e3d663c12213ec5a9dbe251.jpg"
   },
   {
     "question": "Which Disney princess has a pet chameleon named Pascal?",
@@ -133,7 +133,7 @@
   },
   {
     "question": "What is the name of the so called street rat in Aladdin?",
-    "options": ["Aladdin", "Jafar", "Genie", "Abu"],
+    "options": ["Jafar", "Aladdin", "Genie", "Abu"],
     "answer": "Aladdin",
     "img": "https://media.istockphoto.com/id/1132395683/vector/cute-mouse-cartoon-presenting.jpg?s=612x612&w=0&k=20&c=d221Xda14VxBOlJiPkHiQgucDzH8W5RR4WGu_eFp_PU="
   },
@@ -145,7 +145,7 @@
   },
   {
     "question": "What is the name of the dog in Lady and the Tramp?",
-    "options": ["Tramp", "Bolt", "Dug", "Poochie"],
+    "options": ["Dug", "Bolt", "Tramp", "Poochie"],
     "answer": "Tramp",
     "img": "https://i.pinimg.com/564x/09/fb/be/09fbbe2d741b748a86c09b6cb8dfdb41.jpg"
   },
@@ -181,7 +181,7 @@
   },
   {
     "question": "Which Disney character is known for having a magic carpet?",
-    "options": ["Jasmine", "Ariel", "Belle", "Cinderella"],
+    "options": ["Cinderella", "Ariel", "Belle", "Jasmine"],
     "answer": "Jasmine",
     "img": "https://i.pinimg.com/736x/92/4e/8d/924e8d22de3eb19a420788917b8e1b62.jpg"
   },
@@ -194,12 +194,12 @@
   {
     "question": "What animal is the sidekick of Timon in The Lion King?",
     "options": ["Meerkat", "Turtle", "Hog", "Zebra"],
-    "answer": "Meerkat",
-    "img": "./img/lionking.jpg"
+    "answer": "Hog",
+    "img": "https://i.ebayimg.com/images/g/DiAAAOSwBUtctPnb/s-l1200.jpg"
   },
   {
     "question": "Who is the villain in The Little Mermaid?",
-    "options": ["Ursula", "Maleficent", "Scar", "Cruella de Vil"],
+    "options": ["Scar", "Maleficent", "Ursula", "Cruella de Vil"],
     "answer": "Ursula",
     "img": "https://i0.wp.com/thevibewithky.com/wp-content/uploads/2023/09/The-Vibe-With-Ky-Blog-Image.png?resize=1200%2C720&ssl=1"
   },

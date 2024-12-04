@@ -125,7 +125,7 @@ body{
   padding: 50px;
   text-align: center;
   font-family: "Walter", "EB Garamond", serif;
-  color: rgb(255, 255, 255); /* Base LED color */
+  color: rgb(255, 255, 255);
   text-align: center;
   text-shadow: 
     0 0 5px #0ff,  
@@ -140,7 +140,7 @@ body{
   padding: 50px;
   text-align: center;
   font-family: "Walter", "EB Garamond", serif;
-  color: rgb(255, 255, 255); /* Base LED color */
+  color: rgb(255, 255, 255);
   text-align: center;
   text-shadow: 
     0 0 5px #0ff,  
@@ -157,7 +157,7 @@ body{
   background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(240, 216, 161, 0.95));
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1), 4px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 50px 0px 70px rgba(0, 0, 0, 0.2), 4px 3px 5px rgba(0, 0, 0, 0.1);
   color: black;
   grid-row-start: 2;
   grid-column-start: 1;
@@ -172,6 +172,10 @@ body{
   font-family: "Cartoon";
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+#answer-p{
+  font-size: 3.5em;
 }
 
 .page label{
@@ -202,10 +206,13 @@ body{
   transition: transform 0.6s ease-in-out;
 }
 
+.flip-back{
+  transform: translateX(2px) rotateY(360);
+  transition: transform 0.6s ease-in-out;
+}
+
 .flipped{
   z-Index: -100 !important;
-  color: brown !important;
-  background-color: brown !important;
 }
 
 .button{
@@ -219,6 +226,11 @@ body{
   border: none;
   box-shadow: 0px 2px 2px black;
   font-size: 1.4em;
+}
+
+#back{
+  top: 100px;
+  visibility: hidden;
 }
 
 .hidden{
@@ -257,7 +269,7 @@ label {
   cursor: pointer;
 }
 
-.page img{
+#background-image{
   opacity: 0.15;
   position: absolute;
   bottom: 0;
@@ -266,4 +278,24 @@ label {
   user-select: none;
   z-index: -1;
   object-fit: cover;
+  border-radius: 10px;
+}
+
+.stamp{
+  opacity: 1;
+  width: 600px;
+  height: 600px ;
+  transform: rotate(-15deg);
+  position: absolute;
+  left: -100px;
+  bottom: -140px;
+  visibility: hidden;
+  z-index: -1;
+  transform: rotate(50deg);
+}
+
+.active{
+  transform: scale(0.2) rotate(0deg);
+  transition: transform 0.3s;
+  visibility: visible !important;
 }

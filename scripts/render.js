@@ -5,42 +5,55 @@ export default class Render{
   root = document.getElementById("root")
   pageCount = 10
   
+  createElementWithAttribute = (element, attributeType, attributeValue) => {
+    const ele = document.createElement(`${element}`)
+    ele.setAttribute(`${attributeType}`, `${attributeValue}`)
+    return ele
+  }
+
+  createElementWithInnerText = (element, innerText) => {
+    const ele = document.createElement(`${element}`)
+    ele.innerText = `${innerText}`
+    return ele
+  }
+
   createButtons = () => {
-    const flipPageBtn = document.createElement("button")
-    const openBookBtn = document.createElement("button")
+    const flipPageBtn = this.createElementWithAttribute("button", "id", "next")
+    const flipPageBack = this.createElementWithAttribute("button", "id", "back")
+    const openBookBtn = this.createElementWithAttribute("button", "id", "open")
 
     flipPageBtn.innerText = "Next"
+    flipPageBack.innerText = "Back"
     openBookBtn.innerText = "Start"
 
-    flipPageBtn.setAttribute("id", "next")
     flipPageBtn.classList.add("button", "hidden")
-    openBookBtn.setAttribute("id", "open")
     openBookBtn.classList.add("button")
+    flipPageBack.classList.add("button")
 
     flipPageBtn.addEventListener("click", this.flipPage)
+    flipPageBtn.addEventListener("click", () => {
+      flipPageBack.style.visibility = "visible"
+    })
     openBookBtn.addEventListener("click", this.openBook)
+    flipPageBack.addEventListener("click", this.flipBack)
 
     this.root.appendChild(flipPageBtn)
+    this.root.appendChild(flipPageBack)
     this.root.appendChild(openBookBtn)
  }
 
   createBook = () => {
-    const book = document.createElement("div")
-    book.setAttribute("id", "book")
-    const img = document.createElement("img")
+    const book = this.createElementWithAttribute("div", "id", "book")
     this.root.appendChild(book)
   }
 
   createCover = () => {
-    const cover = document.createElement("div")
-    const title = document.createElement("h1")
-    const p = document.createElement("p")
-    const img = document.createElement("img")
-    img.setAttribute("src", "https://www.nhmagazine.com/content/uploads/2021/02/disney-castle-scaled.jpg")
-    cover.setAttribute("id", "cover")
-    title.setAttribute("id", "title")
+    const cover = this.createElementWithAttribute("div", "id", "cover")
+    const title = this.createElementWithAttribute("h1", "id", "title")
+    const img = this.createElementWithAttribute("img", "src", "https://www.nhmagazine.com/content/uploads/2021/02/disney-castle-scaled.jpg")
+    const p = this.createElementWithInnerText("p", "Quizney??")
+
     title.innerText = "DISNEY QUIZ"
-    p.innerText = "Quizney??"
 
     cover.append(title, img, p)
     document.getElementById("book").appendChild(cover)
@@ -49,47 +62,79 @@ export default class Render{
   openBook = () => {
     const cover = document.getElementById("cover")
     cover.classList.add("flip")
+
     setTimeout(() => {
       cover.classList.add("flipped")
       document.querySelector("#cover").style.setProperty('--after-visibility', 'visible');
       document.querySelector("#cover p").style.visibility = "hidden"
+      document.querySelector("#cover h1").style.visibility = "hidden"
     }, 150)
+
     document.getElementById("open").remove()
     document.getElementById("next").classList.remove("hidden")
   }
   
+  lowerOpacityOnFlip = (book) => {
+    if(book.children[this.pageCount + 1].querySelector(".active")){
+      book.children[this.pageCount + 1].querySelector(".active").style.opacity = "0.1"
+    }
+    book.children[this.pageCount + 1].style.color = "rgba(0, 0, 0, 0.1)"
+    book.children[this.pageCount + 1].style.zIndex = `${-this.pageCount}`
+    if(book.children[this.pageCount + 1].childNodes[1]){
+      book.children[this.pageCount + 1].childNodes[1].style.opacity = "0.1"
+    }
+  }
+
+  UpOpacityOnFlipBack = (book) => {
+    if(book.children[this.pageCount].querySelector(".active")){
+      book.children[this.pageCount].querySelector(".active").style.opacity = "1"
+    }
+    book.children[this.pageCount].style.color = "rgba(0, 0, 0, 1)"
+    book.children[this.pageCount].style.zIndex = 0
+    if(book.children[this.pageCount].childNodes[1]){
+      book.children[this.pageCount].childNodes[1].style.opacity = "1"
+    }
+  }
+
   flipPage = () => {
-    const book = this.root.lastElementChild
+    const book = document.getElementById("book")
     const btn = document.getElementById("next")
+
     btn.setAttribute("disabled", true)
     book.children[this.pageCount].classList.add("flip")
     setTimeout(() => {
-      book.children[this.pageCount + 1].style.color = "rgba(0, 0, 0, 0.1)"
-      book.children[this.pageCount + 1].style.zIndex = `${-this.pageCount}`
-      if(book.children[this.pageCount + 1].childNodes[1]){
-        book.children[this.pageCount + 1].childNodes[1].style.opacity = "0.1"
-      }
+      this.lowerOpacityOnFlip(book)
       btn.removeAttribute("disabled")
     }, 300)
     this.pageCount -= 1
   }
 
-  createAnswerForm = (page, options, pageIndex, answerP) => {
-    const answerForm = document.createElement("form")
-    const submit = document.createElement("input")
+  flipBack = () => {
+    const book = document.getElementById("book")
+    const btn = document.getElementById("back")
 
-    answerForm.className = "answer-form"
-    submit.className = "submit-btn"
-    
-    submit.setAttribute("type", "submit")
-    submit.setAttribute("value", "Submit")
+    if(book.children[this.pageCount + 1].id == "cover"){
+      return
+    }else{
+      btn.setAttribute("disabled", true)
+      book.children[this.pageCount + 1].classList.remove("flip")
+      book.children[this.pageCount + 1].classList.remove("flipped")
+      book.children[this.pageCount + 1].classList.add("flip-back")
+      setTimeout(() => {
+        this.UpOpacityOnFlipBack(book)
+        btn.removeAttribute("disabled")
+      }, 300)
+      this.pageCount += 1
+    }
+  }
 
+  createRadioButtons(form, pageIndex, options){
     for (let i = 0; i < 4; i++) {
       const container = document.createElement("div")
       
-      const radioBtn = document.createElement("input")
+      const radioBtn = this.createElementWithAttribute("input", "type", "radio")
       radioBtn.id = `btn-${[i]}-${pageIndex}`
-      radioBtn.setAttribute("type", "radio")
+
       radioBtn.setAttribute("value", options[i])
       radioBtn.setAttribute("name", "answer")
       
@@ -99,41 +144,55 @@ export default class Render{
       label.appendChild(radioBtn)
       container.appendChild(label)
       
-      answerForm.appendChild(container)
+      form.appendChild(container)
     }
+  }
+
+  createAnswerForm = (page, options, pageIndex, answerP, answer, id) => {
+    const answerForm = this.createElementWithAttribute("form", "class", "answer-form")
+    const submit = this.createElementWithAttribute("input", "class", "submit-btn")
     
-    this.formValidator.submitEventListener(submit, answerForm, answerP)
+    submit.setAttribute("type", "submit")
+    submit.setAttribute("value", "Submit")
+
+    this.createRadioButtons(answerForm, pageIndex, options)
+    
+    this.formValidator.submitEventListener(submit, answerForm, answerP, answer, id)
     answerForm.appendChild(submit)
     page.appendChild(answerForm)
   }
+    
+  createPage = (question, options, answer, imgUrl, id) => {
+    const questionP = this.createElementWithAttribute("p", "id", "questions-p")
+    const page = this.createElementWithAttribute("div", "class", "page")
+    const img = this.createElementWithAttribute("img", "id", "background-image")
+    const correctStamp = this.createElementWithAttribute("img", "id", `correct-stamp-${id}`)
+    const wrongStamp = this.createElementWithAttribute("img", "id", `wrong-stamp-${id}`)
+    const answerP = this.createElementWithInnerText("p", `${answer}`)
+    const correctAnswer = this.createElementWithInnerText("p", "Correct answer:")
 
-  createPage = (question, options, answer, imgUrl) => {
-    const page = document.createElement("div")
-    const questionP = document.createElement("p")
-    const answerP = document.createElement("p")
-    const img = document.createElement("img")
+    questionP.innerText = `${question}`
+    page.append(questionP)
+
+    correctAnswer.style.visibility = "hidden"
+    answerP.style.visibility = "hidden"
+    answerP.id = "answer-p"
+
+    correctStamp.setAttribute("src", "../img/correct.png")
+    correctStamp.className = "stamp"
+    wrongStamp.setAttribute("src", "../img/wrong.png")
+    wrongStamp.className = "stamp"
     img.setAttribute("src", imgUrl)
 
-    questionP.setAttribute("id", "questions-p")
-    questionP.innerText = `${question}`
-    page.setAttribute("class", "page")
-    page.append(questionP)
-    answerP.innerText = `Answer:\n${answer}`
-    answerP.style.visibility = "hidden"
+    this.createAnswerForm(page, options, this.pageCount, correctAnswer, answerP, id)
 
-    this.createAnswerForm(page, options, this.pageCount, answerP)
-
-
-    page.append(answerP, img)
+    page.append(correctAnswer, answerP, img, correctStamp, wrongStamp)
     document.getElementById("book").appendChild(page)
   }
 
   createInstructionPage = (instrucitons) => {
-    const page = document.createElement("div")
-    const instrucitonParagraph = document.createElement("p")
-
-    instrucitonParagraph.setAttribute("id", "instruciton-p")
-    page.setAttribute("class", "page")
+    const page = this.createElementWithAttribute("div", "class", "page")
+    const instrucitonParagraph = this.createElementWithAttribute("p", "id", "instruciton-p")
 
     instrucitonParagraph.innerText = `${instrucitons}`
 
