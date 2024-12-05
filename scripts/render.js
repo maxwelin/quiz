@@ -1,29 +1,36 @@
 export default class Render{
-  constructor(formValidator){
+  constructor(formValidator, quizState){
     this.formValidator = formValidator
+    this.quizState = quizState
   }
   root = document.getElementById("root")
   pageCount = 10
   
   createElementWithAttribute = (element, attributeType, attributeValue) => {
-    const ele = document.createElement(`${element}`)
-    ele.setAttribute(`${attributeType}`, `${attributeValue}`)
-    return ele
+    const e = document.createElement(`${element}`)
+    e.setAttribute(`${attributeType}`, `${attributeValue}`)
+    return e
   }
 
   createElementWithInnerText = (element, innerText) => {
-    const ele = document.createElement(`${element}`)
-    ele.innerText = `${innerText}`
-    return ele
+    const e = document.createElement(`${element}`)
+    e.innerText = `${innerText}`
+    return e
+  }
+  
+  createBook = () => {
+    const book = this.createElementWithAttribute("div", "id", "book")
+    this.root.appendChild(book)
   }
 
   createButtons = () => {
+    const btnContainer = this.createElementWithAttribute("div", "id", "btn-container")
     const flipPageBtn = this.createElementWithAttribute("button", "id", "next")
     const flipPageBack = this.createElementWithAttribute("button", "id", "back")
     const openBookBtn = this.createElementWithAttribute("button", "id", "open")
 
-    flipPageBtn.innerText = "Next"
-    flipPageBack.innerText = "Back"
+    flipPageBtn.innerText = "Next🠊 "
+    flipPageBack.innerText = "🠈Back"
     openBookBtn.innerText = "Start"
 
     flipPageBtn.classList.add("button", "hidden")
@@ -37,15 +44,10 @@ export default class Render{
     openBookBtn.addEventListener("click", this.openBook)
     flipPageBack.addEventListener("click", this.flipBack)
 
-    this.root.appendChild(flipPageBtn)
-    this.root.appendChild(flipPageBack)
-    this.root.appendChild(openBookBtn)
+    btnContainer.append(flipPageBack, openBookBtn, flipPageBtn)
+    this.root.appendChild(btnContainer)
  }
 
-  createBook = () => {
-    const book = this.createElementWithAttribute("div", "id", "book")
-    this.root.appendChild(book)
-  }
 
   createCover = () => {
     const cover = this.createElementWithAttribute("div", "id", "cover")
@@ -60,8 +62,11 @@ export default class Render{
   }
   
   openBook = () => {
+    const book = document.getElementById("book")
     const cover = document.getElementById("cover")
     cover.classList.add("flip")
+
+    this.countdown(book.children[this.pageCount].querySelector(".timer"))
 
     setTimeout(() => {
       cover.classList.add("flipped")
@@ -98,31 +103,48 @@ export default class Render{
 
   flipPage = () => {
     const book = document.getElementById("book")
-    const btn = document.getElementById("next")
+    const nextBtn = document.getElementById("next")
+    const backBtn = document.getElementById("back")
 
-    btn.setAttribute("disabled", true)
+    if(!book.children[this.pageCount - 1]){
+      return
+    } 
+    if(book.children[this.pageCount - 1].id == "score-page"){
+      this.getScore()
+    }
+    nextBtn.setAttribute("disabled", true)
+    backBtn.setAttribute("disabled", true)
+
     book.children[this.pageCount].classList.add("flip")
+    this.countdown(book.children[this.pageCount - 1].querySelector(".timer"))
+    
     setTimeout(() => {
       this.lowerOpacityOnFlip(book)
-      btn.removeAttribute("disabled")
+      nextBtn.removeAttribute("disabled")
+      backBtn.removeAttribute("disabled")
     }, 300)
     this.pageCount -= 1
   }
 
   flipBack = () => {
     const book = document.getElementById("book")
-    const btn = document.getElementById("back")
+    const nextBtn = document.getElementById("next")
+    const backBtn = document.getElementById("back")
 
     if(book.children[this.pageCount + 1].id == "cover"){
       return
     }else{
-      btn.setAttribute("disabled", true)
+      nextBtn.setAttribute("disabled", true)
+      backBtn.setAttribute("disabled", true)
+
       book.children[this.pageCount + 1].classList.remove("flip")
       book.children[this.pageCount + 1].classList.remove("flipped")
       book.children[this.pageCount + 1].classList.add("flip-back")
+      this.countdown(book.children[this.pageCount + 1].querySelector(".timer"))
       setTimeout(() => {
         this.UpOpacityOnFlipBack(book)
-        btn.removeAttribute("disabled")
+        nextBtn.removeAttribute("disabled")
+        backBtn.removeAttribute("disabled")
       }, 300)
       this.pageCount += 1
     }
@@ -161,42 +183,102 @@ export default class Render{
     answerForm.appendChild(submit)
     page.appendChild(answerForm)
   }
+
+  stopCountdown = () => {
+    clearInterval(this.quizState.clock);
+  }
+
+  countdown = (p) => {
     
+    this.stopCountdown()
+    let timer = 10
+  
+    this.quizState.clock = setInterval(() => {
+      if(timer < 5){
+        p.style.color = "red"
+      }
+
+      timer -= 1
+      p.innerText = timer
+
+      if(timer < 1){
+        clearInterval(this.quizState.clock)
+        this.formValidator.timesUp(p.id.slice(-1), )
+      }
+    }, 1000)
+  }
+
   createPage = (question, options, answer, imgUrl, id) => {
+    let questionAnswered = false;
     const questionP = this.createElementWithAttribute("p", "id", "questions-p")
+    const timerP = this.createElementWithAttribute("p", "id", `timer-p-${id}`)
     const page = this.createElementWithAttribute("div", "class", "page")
     const img = this.createElementWithAttribute("img", "id", "background-image")
+    const hand = this.createElementWithAttribute("img", "id", `hand-${id}`)
     const correctStamp = this.createElementWithAttribute("img", "id", `correct-stamp-${id}`)
     const wrongStamp = this.createElementWithAttribute("img", "id", `wrong-stamp-${id}`)
     const answerP = this.createElementWithInnerText("p", `${answer}`)
     const correctAnswer = this.createElementWithInnerText("p", "Correct answer:")
 
+    timerP.className = "timer"
     questionP.innerText = `${question}`
     page.append(questionP)
 
     correctAnswer.style.visibility = "hidden"
     answerP.style.visibility = "hidden"
-    answerP.id = "answer-p"
+    correctAnswer.id = `correct-answer-p-${id}`
+    answerP.id = `answer-p-${id}`
 
     correctStamp.setAttribute("src", "../img/correct.png")
     correctStamp.className = "stamp"
     wrongStamp.setAttribute("src", "../img/wrong.png")
     wrongStamp.className = "stamp"
+    hand.setAttribute("src", "../img/hand.png")
+    hand.className = "hand"
     img.setAttribute("src", imgUrl)
 
     this.createAnswerForm(page, options, this.pageCount, correctAnswer, answerP, id)
 
-    page.append(correctAnswer, answerP, img, correctStamp, wrongStamp)
+    page.append(correctAnswer, timerP, answerP, img, correctStamp, wrongStamp, hand)
     document.getElementById("book").appendChild(page)
   }
 
-  createInstructionPage = (instrucitons) => {
+  getScore = () => {
+    const scoreParagraph = document.getElementById("score-p")
+    let comment = ""
+    const score = this.quizState.score
+    switch (true) {
+      case score === 0:
+        comment = "Did you even try? Embarrassing.."
+        break
+      case score < 5:
+        comment = "You scored below average, but don't worry! Try again and you'll do even better!"
+        break
+      case score === 5:
+        comment = "Good try! You scored 5 out of 10—keep practicing and you'll improve!"
+        break
+      case score === 6 || score === 7:
+        comment = "Great effort! You scored above average, keep up the good work!"
+        break
+      case score === 8 || score === 9:
+        comment = "Great job! So close to the perfect score! Keep practicing, almost there!"
+        break
+      case score === 10:
+        comment = "Perfect score! You nailed it\n—10/10—\ngreat job!"
+        break
+    }
+    scoreParagraph.innerText = `${this.quizState.score} / 10\n\n${comment}`
+  }
+
+  createScorePage = () => {
     const page = this.createElementWithAttribute("div", "class", "page")
-    const instrucitonParagraph = this.createElementWithAttribute("p", "id", "instruciton-p")
+    const p = this.createElementWithInnerText("p", "YOUR SCORE:")
+    const scoreP = this.createElementWithAttribute("p", "id", "score-p")
+    const img = this.createElementWithAttribute("img", "src", "https://img.freepik.com/premium-vector/colorful-fireworks-display-night-sky-with-stars_1300528-72611.jpg")
 
-    instrucitonParagraph.innerText = `${instrucitons}`
+    page.id = "score-page"
 
-    page.append(instrucitonParagraph)
+    page.append(p, scoreP, img)
     document.getElementById("book").appendChild(page)
   }
 }

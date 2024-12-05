@@ -1,20 +1,21 @@
-import FetchService from "./fetchService.js"
+import {FetchService, QuizState} from "./utils.js"
 import Render from "./render.js"
 import FormValidator from "./formValidator.js"
 
-const formValidator = new FormValidator()
-const fetch = new FetchService()
-const render = new Render(formValidator)
+const quizState= new QuizState()
+const fetchService = new FetchService()
+const formValidator = new FormValidator(quizState)
+const render = new Render(formValidator, quizState)
 
-render.createButtons()
 render.createBook()
+render.createButtons()
 
 
 function getRandomQuizQuestion(){
   let questionsToRender = []
   while(questionsToRender.length < 10){
     
-    let rnd = Math.floor(Math.random()*48) + 1
+    let rnd = Math.floor(Math.random()*58) + 1
     let exists = false
   
     for (let i = 0; i < 10; i++) {
@@ -29,11 +30,11 @@ function getRandomQuizQuestion(){
   return questionsToRender
 }
 
-fetch.fetchQuiz().then((quiz) => {
+fetchService.fetchQuiz().then((quiz) => {
   console.log(quiz)
   const randomQuestions = getRandomQuizQuestion()
   console.log(randomQuestions)
-  render.createInstructionPage("scorescreen??")
+  render.createScorePage()
   for (let i = 0; i < 10; i++) {
     let rnd = randomQuestions[i]
     render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img, [i])

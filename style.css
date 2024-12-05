@@ -12,7 +12,7 @@
 }
 
 body{
-  text-shadow: 1px 1px 20px white;
+  text-shadow: 1px 1px 2px white;
 }
 
 #root{
@@ -20,6 +20,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin: auto;
   width: 90vw;
   height: 90vh;
@@ -44,6 +45,7 @@ body{
   border-top:1px solid black;
   border-right:1px solid black;
   border-bottom:1px solid black;
+  margin-bottom: 10px;;
 }
 
 #book:after {
@@ -215,21 +217,31 @@ body{
   z-Index: -100 !important;
 }
 
+#btn-container{
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
 .button{
-  background-color: rgb(3, 201, 3);
-  position: absolute;
-  right: 100px;
+  font-family: "Cartoon", "EB Garamond", serif;
+  background-color: rgba(0, 0, 0, 0.1);
   width: 100px;
   height: 40px;
   border-radius: 20px;
-  color: white;
   border: none;
   box-shadow: 0px 2px 2px black;
   font-size: 1.4em;
+  z-index: 50000;
+  transition: transform 0.1s;
+}
+
+.button:hover{
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 #back{
-  top: 100px;
   visibility: hidden;
 }
 
@@ -244,19 +256,24 @@ body{
 }
 
 .submit-btn{
-  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  margin-top: 10px;
   font-family: "Cartoon", "EB Garamond", serif;
   font-size: 1.2em;
-  font-optical-sizing: auto;
-  font-style: normal;
-  border-radius: 10px;
-  padding: 5px;
-  border: 1px solid black;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 2px 2px black;
+  font-size: 1.4em;
   cursor: pointer;
   transition: transform 0.1s;
 }
 
 .submit-btn:hover{
+  background-color: rgb(113, 199, 1);
+  color: white;
   transform: scale(1.05);
 }
 
@@ -285,17 +302,58 @@ label {
   opacity: 1;
   width: 600px;
   height: 600px ;
-  transform: rotate(-15deg);
   position: absolute;
-  left: -100px;
+  left: 100px;
   bottom: -140px;
   visibility: hidden;
   z-index: -1;
-  transform: rotate(50deg);
+  transform-origin: left;
 }
 
-.active{
-  transform: scale(0.2) rotate(0deg);
+.stamp.active{
+  transform: scale(0.35);
   transition: transform 0.3s;
   visibility: visible !important;
+}
+
+.hand{
+  opacity: 1;
+  width: 600px;
+  height: 600px ;
+  transform: rotate(20deg);
+  position: absolute;
+  bottom: -200px;
+  transform-origin: left;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.hand.active{
+  transform: scale(0.5);
+  transition: transform 0.3s;
+  visibility: visible !important;
+}
+
+
+#score-page img{
+  top: 0;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0.1 !important;
+  width: 100%;
+  height: 100%;
+}
+
+#score-p{
+  font-size: 3em;
+}
+
+.timer{
+  user-select: none;
+  position: absolute;
+  top: 100px;
+  left: 130px;
+  opacity: 0.3;
+  z-index: -1;
+  font-size: 15em !important;
 }

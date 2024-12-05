@@ -1,7 +1,9 @@
 
 export default class FormValidator{
-  constructor(){
-    this.correct = "../img/correct.png"
+  constructor(quizState){
+    this.quizState = quizState
+    this.slap = new Audio("../img/punch.wav")
+    this.jingle = new Audio("../img/success.mp3")
   }
 
   submitEventListener = (button, form, answerP, answer, id) => {
@@ -14,24 +16,81 @@ export default class FormValidator{
         alert("Please select an answer!")
         return
       } else if (data.answer == answer.innerHTML) {
-        console.log("bingo")
-        this.correctAnswer(id)
-        button.setAttribute("disabled", "true")
+        this.quizState.score += 1
+        this.correctAnswer(id, button)
       } else {
-        console.log("fel")
-        this.wrongAnswer(id)
-        button.setAttribute("disabled", "true")
+        this.wrongAnswer(id, button)
       }
       answer.style.visibility = "visible"
       answerP.style.visibility = "visible"
     })
   }
 
-  correctAnswer = (id) => {
+  correctAnswer = (id, button) => {
+    clearInterval(this.quizState.clock)
+
+    const timer = document.getElementById(`timer-p-${id}`)
+    timer.style.visibility = "hidden"
+
     document.getElementById(`correct-stamp-${id}`).classList.add("active")
+    // document.getElementById(`hand-${id}`).classList.add("active")
+    button.setAttribute("disabled", "true")
+    // this.playSlapSound()
+    this.playJingleSound()
+
+    setTimeout(() => {
+      document.getElementById(`hand-${id}`).classList.remove("active")
+    }, 450)
   }
 
-  wrongAnswer = (id) => {
+  wrongAnswer = (id, button) => {
+    clearInterval(this.quizState.clock)
+
+    const timer = document.getElementById(`timer-p-${id}`)
+    timer.style.visibility = "hidden"
+
     document.getElementById(`wrong-stamp-${id}`).classList.add("active")
+    document.getElementById(`hand-${id}`).classList.add("active")
+    button.setAttribute("disabled", "true")
+    this.playSlapSound()
+
+    setTimeout(() => {
+      document.getElementById(`hand-${id}`).classList.remove("active")
+    }, 450)
   }
+
+  timesUp = (id) => {
+    clearInterval(this.quizState.clock)
+
+    const timer = document.getElementById(`timer-p-${id}`)
+    const submitBtn = timer.parentNode.querySelector("form .submit-btn")
+
+    timer.style.visibility = "hidden"
+    submitBtn.setAttribute("disabled", true)
+
+    document.getElementById(`wrong-stamp-${id}`).classList.add("active")
+    document.getElementById(`hand-${id}`).classList.add("active")
+    document.getElementById(`correct-answer-p-${id}`).style.visibility = "visible"
+    document.getElementById(`answer-p-${id}`).style.visibility = "visible"
+    this.playSlapSound()
+
+    setTimeout(() => {
+      document.getElementById(`hand-${id}`).classList.remove("active")
+    }, 450)
+  }
+
+  playSlapSound(){
+    setTimeout(() => {
+      this.slap.volume = 0.1
+      this.slap.play()
+    }, 60)
+  }
+
+  playJingleSound(){
+    setTimeout(() => {
+      this.jingle.volume = 0.1
+      this.jingle.play()
+    }, 60)
+  }
+  
 }

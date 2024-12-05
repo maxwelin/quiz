@@ -246,10 +246,10 @@
     "img": "https://www.pngplay.com/wp-content/uploads/12/Moana-Disney-PNG-Clipart-Background.png"
   },
   {
-    "question": "Which Disney movie features a character named Elsa?",
-    "options": ["Frozen", "Tangled", "Brave", "Mulan"],
-    "answer": "Frozen",
-    "img": "https://i.pinimg.com/736x/88/b0/7e/88b07e62286e040d72d55b133fff0d1a.jpg"
+    "question": "What type of animal is Bambi’s friend Thumper??",
+    "options": ["Squirrel", "Rabbit", "Fox", "Deer"],
+    "answer": "Rabbit",
+    "img": "https://3dmodels.org/wp-content/uploads/2023/08/29/Bambi_3d_model_1000_0001.jpg"
   },
   {
     "question": "Who is the villain in Aladdin?",
@@ -291,6 +291,66 @@
     "question": "Which character says, 'Just keep swimming'?",
     "options": ["Marlin", "Dory", "Nemo", "Squirt"],
     "answer": "Dory",
-    "img": "https://u-mercari-images.mercdn.net/photos/m18022227018_1.jpg?width=512&height=512&format=pjpg&auto=webp&fit=crop&_=1711847280"
+    "img": "https://images.sr.roku.com/idType/roku/context/global/id/c40a5f5005fa50eb8afc4a832be9cf0e/images/gracenote/assets/p31890_k_v12_ab.jpg/magic/396x0/filters:quality(70)"
+  },
+  {
+    "question": "In Beauty and the Beast, what is the name of the enchanted candelabra?",
+    "options": ["Cogsworth", "Lumière", "Maurice", "Gaston"],
+    "answer": "Lumière",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDcE_8-xJ5G65Wnl9kubc5mkXWFkgJYJB_4RO_yvUrGdS3aNEgVazOWgZI0KsWpyskjg&usqp=CAU"
+  },
+  {
+    "question": "What is the name of the main antagonist in 'The Incredibles'?",
+    "options": ["Syndrome", "Bomb Voyage", "Underminer", "Mirage"],
+    "answer": "Syndrome",
+    "img": "https://e1.pxfuel.com/desktop-wallpaper/561/857/desktop-wallpaper-still-geekin-out-about-it-syndrome-disney-pixars-the-incredibles-thumbnail.jpg"
+  },
+  {
+    "question": "Which Disney princess has a raccoon as a sidekick?",
+    "options": ["Rapunzel", "Mulan", "Ariel", "Pocahontas"],
+    "answer": "Pocahontas",
+    "img": "https://www.disneyclips.com/images/images/meeko-flit2.png"
+  },
+  {
+    "question": "In 'Finding Nemo', what is the name of Nemo’s dad?",
+    "options": ["Dory", "Marlin", "Bruce", "Nigel"],
+    "answer": "Marlin",
+    "img": "https://i.pinimg.com/474x/71/58/28/7158281640733e941b8f81e1d235225b.jpg"
+  },
+  {
+    "question": "In 'Cinderella', what is the name of the prince?",
+    "options": ["Prince Philip", "Prince Charming", "Prince Eric", "Prince Adam"],
+    "answer": "Prince Charming",
+    "img": "https://m.media-amazon.com/images/I/51bpiaXlqjL.jpg"
+  },
+  {
+    "question": "In 'Moana', what is the name of the demigod who helps Moana on her journey?",
+    "options": ["Maui", "Pua", "Tamatoa", "Te Fiti"],
+    "answer": "Maui",
+    "img": "https://cdn.media.amplience.net/i/partycity/775608?$pdpSmall$&fmt=auto&qlt=default"
+  },
+  {
+    "question": "Which character says, 'Just keep swimming'?",
+    "options": ["Marlin", "Dory", "Nemo", "Squirt"],
+    "answer": "Dory",
+    "img": "https://images.sr.roku.com/idType/roku/context/global/id/c40a5f5005fa50eb8afc4a832be9cf0e/images/gracenote/assets/p31890_k_v12_ab.jpg/magic/396x0/filters:quality(70)"
+  },
+  {
+    "question": "What is the name of Simba’s father in 'The Lion King'?",
+    "options": ["Mufasa", "Scar", "Rafiki", "Timon"],
+    "answer": "Mufasa",
+    "img": "https://www.disneyclips.com/images/images/mufasa-simba.png"
+  },
+  {
+    "question": "What is the name of the dragon in 'Mulan'?",
+    "options": ["Mushu", "Khan", "Shan Yu", "Cri-Kee"],
+    "answer": "Mushu",
+    "img": "https://images.fineartamerica.com/images/artworkimages/medium/3/mushu-fan-art-3d-sculpture-kelly-johnson.jpg"
+  },
+  {
+    "question": "In 'Ratatouille', what is the name of the rat who dreams of becoming a chef?",
+    "options": ["Rémy", "Emile", "Django", "Linguini"],
+    "answer": "Rémy",
+    "img": "https://ih1.redbubble.net/image.5192560044.0470/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
   }
 ]
