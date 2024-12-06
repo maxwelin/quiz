@@ -13,9 +13,9 @@ render.createButtons()
 
 function getRandomQuizQuestion(){
   let questionsToRender = []
+
   while(questionsToRender.length < 10){
-    
-    let rnd = Math.floor(Math.random()*58) + 1
+    let rnd = Math.floor(Math.random()*79) + 1
     let exists = false
   
     for (let i = 0; i < 10; i++) {
@@ -30,15 +30,19 @@ function getRandomQuizQuestion(){
   return questionsToRender
 }
 
-fetchService.fetchQuiz().then((quiz) => {
-  console.log(quiz)
-  const randomQuestions = getRandomQuizQuestion()
-  console.log(randomQuestions)
-  render.createScorePage()
-  for (let i = 0; i < 10; i++) {
-    let rnd = randomQuestions[i]
-    render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img, [i])
-  }
-  render.createCover()
-})
+const newGame = () => {
+  fetchService.fetchQuiz().then((quiz) => {
+    console.log(quiz)
+    const randomQuestions = getRandomQuizQuestion()
+    console.log(randomQuestions)
+    render.createScorePage()
+    for (let i = 0; i < 10; i++) {
+      let rnd = randomQuestions[i]
+      render.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img, [i])
+    }
+    render.createCover()
+  })
+}
+
+newGame()
 

@@ -37,10 +37,9 @@ export default class Render{
     openBookBtn.classList.add("button")
     flipPageBack.classList.add("button")
 
+    flipPageBtn.setAttribute("disabled", true)
+
     flipPageBtn.addEventListener("click", this.flipPage)
-    flipPageBtn.addEventListener("click", () => {
-      flipPageBack.style.visibility = "visible"
-    })
     openBookBtn.addEventListener("click", this.openBook)
     flipPageBack.addEventListener("click", this.flipBack)
 
@@ -111,22 +110,28 @@ export default class Render{
     } 
     if(book.children[this.pageCount - 1].id == "score-page"){
       this.getScore()
+      this.stopCountdown()
+      this.quizState.finished = true;
+      document.getElementById("back").style.visibility = "visible"
     }
     nextBtn.setAttribute("disabled", true)
     backBtn.setAttribute("disabled", true)
 
     book.children[this.pageCount].classList.add("flip")
     this.countdown(book.children[this.pageCount - 1].querySelector(".timer"))
-    
+
     setTimeout(() => {
       this.lowerOpacityOnFlip(book)
-      nextBtn.removeAttribute("disabled")
-      backBtn.removeAttribute("disabled")
-    }, 300)
-    this.pageCount -= 1
+        if(this.quizState.finished){
+          nextBtn.removeAttribute("disabled")
+          backBtn.removeAttribute("disabled")
+        }
+      }, 300)
+      this.pageCount -= 1
   }
 
   flipBack = () => {
+    this.stopCountdown()
     const book = document.getElementById("book")
     const nextBtn = document.getElementById("next")
     const backBtn = document.getElementById("back")
@@ -140,7 +145,6 @@ export default class Render{
       book.children[this.pageCount + 1].classList.remove("flip")
       book.children[this.pageCount + 1].classList.remove("flipped")
       book.children[this.pageCount + 1].classList.add("flip-back")
-      this.countdown(book.children[this.pageCount + 1].querySelector(".timer"))
       setTimeout(() => {
         this.UpOpacityOnFlipBack(book)
         nextBtn.removeAttribute("disabled")
@@ -186,30 +190,31 @@ export default class Render{
 
   stopCountdown = () => {
     clearInterval(this.quizState.clock);
+    this.quizState.clock = null;
   }
 
   countdown = (p) => {
-    
     this.stopCountdown()
     let timer = 10
-  
-    this.quizState.clock = setInterval(() => {
-      if(timer < 5){
-        p.style.color = "red"
-      }
-
-      timer -= 1
-      p.innerText = timer
-
-      if(timer < 1){
-        clearInterval(this.quizState.clock)
-        this.formValidator.timesUp(p.id.slice(-1), )
-      }
-    }, 1000)
+    if(p){
+      this.quizState.clock = setInterval(() => {
+        console.log(timer)
+        if(timer < 5){
+          p.style.color = "red"
+        }
+        
+        timer -= 1
+        p.innerText = timer
+        
+        if(timer < 1){
+          clearInterval(this.quizState.clock)
+          this.formValidator.timesUp(p.id.slice(-1), )
+        }
+      }, 1000)
+    }
   }
 
   createPage = (question, options, answer, imgUrl, id) => {
-    let questionAnswered = false;
     const questionP = this.createElementWithAttribute("p", "id", "questions-p")
     const timerP = this.createElementWithAttribute("p", "id", `timer-p-${id}`)
     const page = this.createElementWithAttribute("div", "class", "page")
@@ -246,28 +251,48 @@ export default class Render{
     document.getElementById("book").appendChild(page)
   }
 
+  playSound = (sound) => {
+    if(sound == this.formValidator.nice){
+      setTimeout(() => {
+        sound.volume = 0.2
+        sound.play()
+      }, 800)
+    } else {
+      setTimeout(() => {
+        sound.volume = 0.2
+        sound.play()
+      }, 200)
+    }
+  }
+
   getScore = () => {
     const scoreParagraph = document.getElementById("score-p")
     let comment = ""
     const score = this.quizState.score
     switch (true) {
       case score === 0:
-        comment = "Did you even try? Embarrassing.."
+        comment = "Did you even try?\n\nEmbarrassing.."
+        this.playSound(this.formValidator.aww)
         break
       case score < 5:
-        comment = "You scored below average, but don't worry! Try again and you'll do even better!"
+        comment = "You scored below average.\n\nTry again and do better!"
+        this.playSound(this.formValidator.clap)
         break
       case score === 5:
-        comment = "Good try! You scored 5 out of 10—keep practicing and you'll improve!"
+        comment = "You scored 5 out of 10,\n\nkeep practicing and you'll improve."
+        this.playSound(this.formValidator.hmm)
         break
       case score === 6 || score === 7:
-        comment = "Great effort! You scored above average, keep up the good work!"
+        comment = "Great effort,\nyou scored above average.\n\nKeep practicing!"
+        this.playSound(this.formValidator.applause)
         break
       case score === 8 || score === 9:
-        comment = "Great job! So close to the perfect score! Keep practicing, almost there!"
+        comment = "Great job,\nyou're getting there.\n\nKeep it up!"
+        this.playSound(this.formValidator.wow)
         break
       case score === 10:
-        comment = "Perfect score! You nailed it\n—10/10—\ngreat job!"
+        comment = "Perfect score,\nyou nailed it!\n\nNice."
+        this.playSound(this.formValidator.nice)
         break
     }
     scoreParagraph.innerText = `${this.quizState.score} / 10\n\n${comment}`

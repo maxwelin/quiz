@@ -3,7 +3,7 @@
     "question": "What is the name of the toy cowboy in Toy Story?",
     "options": ["Buzz Lightyear", "Woody", "Mr. Potato Head", "Slinky Dog"],
     "answer": "Woody",
-    "img": "https://kidsdreamstore.se/userfiles/image/toystore_kids.jpg"
+    "img": "https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-10n7ovy_9b42e613.jpeg"
   },
   {
     "question": "In which Disney movie does the character Elsa appear?",
@@ -15,13 +15,13 @@
     "question": "What is the name of the lion cub in The Lion King?",
     "options": ["Simba", "Mufasa", "Nala", "Scar"],
     "answer": "Simba",
-    "img": "https://www.partyrama.co.uk/wp-content/plugins/partyrama-ecommerce-pro/includes/pro-images/prod-img/default/simba-sitting-disney-the-lion-king-star-mini-cardboard-cutout-84cm-product-image.jpg"
+    "img": "https://i.etsystatic.com/42415510/r/il/5bb9de/5422438084/il_570xN.5422438084_3o3q.jpg"
   },
   {
     "question": "Who is the fairy in Peter Pan?",
     "options": ["Ariel", "Cinderella", "Tinker Bell", "Aurora"],
     "answer": "Tinker Bell",
-    "img": "./img/tinkerbell.jpg"
+    "img": "https://i.pinimg.com/originals/78/07/12/780712032d80fbfcdf444b47bfa82d7b.jpg"
   },
   {
     "question": "Which character is known for saying, 'Ohana means family'?",
@@ -33,13 +33,13 @@
     "question": "Who is the main antagonist in the movie Sleeping Beauty?",
     "options": ["Ursula", "Maleficent", "Scar", "Cruella de Vil"],
     "answer": "Maleficent",
-    "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/480cf1e8-bb6a-41e7-980b-9b581fe7140f/dex3i27-bbf8f534-9de3-4be7-8e10-fe30a4c10906.png/v1/fill/w_1280,h_1630/princess_aurora_in_blue__18_by_mermaidmelodyedits_dex3i27-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYzMCIsInBhdGgiOiJcL2ZcLzQ4MGNmMWU4LWJiNmEtNDFlNy05ODBiLTliNTgxZmU3MTQwZlwvZGV4M2kyNy1iYmY4ZjUzNC05ZGUzLTRiZTctOGUxMC1mZTMwYTRjMTA5MDYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.al_e_1_b1g6TaJej28gmTn6EELd525mrbKEA63TQSJc"
+    "img": "https://i.pinimg.com/474x/70/c6/c0/70c6c0fceae447b4b9b9c4fe8012fe80.jpg"
   },
   {
     "question": "What is the name of the fish in Finding ___?",
     "options": ["Dory", "Nemo", "Flounder", "Marlin"],
     "answer": "Nemo",
-    "img": "https://u-mercari-images.mercdn.net/photos/m18022227018_1.jpg?width=512&height=512&format=pjpg&auto=webp&fit=crop&_=1711847280"
+    "img": "https://www.intofilm.org/intofilm-production/scaledcropped/1096x548https%3A/s3-eu-west-1.amazonaws.com/images.cdn.filmclub.org/film__2806-finding-nemo--hi_res-29d7b196.jpg/film__2806-finding-nemo--hi_res-29d7b196.jpg"
   },
   {
     "question": "Which Disney princess has a pet tiger named Rajah?",
@@ -48,16 +48,16 @@
     "img": "https://i.pinimg.com/474x/d6/5c/27/d65c274d98021c18263715e5c9dd511a.jpg"
   },
   {
-    "question": "What type of animal is Dumbo?",
-    "options": ["Elephant", "Horse", "Mouse", "Lion"],
-    "answer": "Elephant",
+    "question": "In the movie Dumbo, what is the name of the mouse who helps Dumbo?",
+    "options": ["Jaq", "Gus Gus", "Bernard", "Timothy"],
+    "answer": "Timothy",
     "img": "https://image-resizing.booztcdn.com/simba-toys/sts6315876245_cblue.webp?has_grey=1&has_webp=0&dpr=2.5&size=w400"
   },
   {
     "question": "Which Disney princess is known for her glass slipper?",
     "options": ["Rapunzel", "Aurora", "Cinderella", "Belle"],
     "answer": "Cinderella",
-    "img": "https://media.wondercity.com/images/product/9171/18276/LzIEbc4lWwp3lyWwquv3CjeOWdmog3-metaNjAxMzM5NyAoMSkuanBn-.jpg"
+    "img": "https://e0.pxfuel.com/wallpapers/892/56/desktop-wallpaper-cinderella-cartoon-cinderella-beautiful-thumbnail.jpg"
   },
   {
     "question": "Which animated film features the song 'Let It Go'?",
@@ -75,7 +75,7 @@
     "question": "Who is the princess in Beauty and the Beast?",
     "options": ["Ariel", "Belle", "Cinderella", "Snow White"],
     "answer": "Belle",
-    "img": "https://i.pinimg.com/736x/9c/8b/a3/9c8ba3021fc08219fed0781fde6c1852.jpg"
+    "img": "https://images.bauerhosting.com/legacy/empire-tmdb/films/10020/images/q8OEC91NiJOpghWI9hXtC27nFX0.jpg?ar=16:9&fit=crop&crop=top"
   },
   {
     "question": "What is the name of the snowman in Frozen?",
@@ -96,9 +96,9 @@
     "img": "https://i.ebayimg.com/images/g/jZcAAOSw91NTunas/s-l1200.jpg"
   },
   {
-    "question": "In which movie does the character Mulan appear?",
-    "options": ["Mulan", "Cinderella", "The Little Mermaid", "Pocahontas"],
-    "answer": "Mulan",
+    "question": "What is the name of the emperor's palace in Mulan?",
+    "options": ["The Great Hall", "The Imperial Palace", "The Forbidden City", "Dragon's Keep"],
+    "answer": "The Forbidden City",
     "img": "https://cdn11.bigcommerce.com/s-qc6bb7/images/stencil/1280x1280/products/15680/45947/QXD6299__50332.1721328788.jpg?c=2"
   },
   {
@@ -117,7 +117,7 @@
     "question": "What animal is Baloo in The Jungle Book?",
     "options": ["Bear", "Lion", "Monkey", "Elephant"],
     "answer": "Bear",
-    "img": "https://ih1.redbubble.net/image.1367652421.5795/st,small,507x507-pad,600x600,f8f8f8.jpg"
+    "img": "https://i5.walmartimages.com/seo/Mowgli-Jungle-Book-Cartoon-Character-Customized-Wall-Decal-Custom-Vinyl-Art-Personalized-Name-Baby-Girls-Boys-Kids-Bedroom-Room-Decor-Stickers-Decora_ef12ba8e-4a60-46bd-8dfe-2d44867ffa95_1.717fb9df7b176e5bb886e5ccd00fb7d2.jpeg"
   },
   {
     "question": "What is the name of the whale in Pinocchio?",
@@ -129,7 +129,7 @@
     "question": "Which Disney princess has a pet chameleon named Pascal?",
     "options": ["Rapunzel", "Ariel", "Aurora", "Snow White"],
     "answer": "Rapunzel",
-    "img": "https://i.pinimg.com/originals/6b/4e/46/6b4e463c478e2c0b637d0da439a19e23.png"
+    "img": "https://i.pinimg.com/736x/d2/db/18/d2db187f46388818404662876bc86c93.jpg"
   },
   {
     "question": "What is the name of the so called street rat in Aladdin?",
@@ -153,7 +153,7 @@
     "question": "Who are the parents of the twins in The Incredibles?",
     "options": ["Helen and Bob Parr", "Fred and Mary Parr", "Dash and Violet", "Lucius and Edna"],
     "answer": "Helen and Bob Parr",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-V-NTl2E8P2-1Vd69goHnlN_w6SZxEp5F_wAEuk8eLXSDcgSN40q2KUvi7w9u8vVPo4U&usqp=CAU"
+    "img": "https://64.media.tumblr.com/82b79a23a79746751ea3d49c51f95977/032d491e3be8381e-d8/s640x960/edfe013b1f2630c84cb20b1eb02cdec4adb0451d.pnj"
   },
   {
     "question": "What is the name of the bear in The Jungle Book?",
@@ -168,28 +168,28 @@
     "img": "https://ih1.redbubble.net/image.411129167.3054/flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg"
   },
   {
-    "question": "Which movie features a character named Pocahontas?",
-    "options": ["Pocahontas", "Mulan", "Brave", "Aladdin"],
-    "answer": "Pocahontas",
+    "question": "In Pocahontas, what is the name of the Englishman who falls in love with Pocahontas?",
+    "options": ["John Rolfe", "Governor Ratcliffe", "Thomas", "John Smith"],
+    "answer": "John Smith",
     "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e647605a-8e2c-4ed7-98ae-754a8d672b6a/dgf6rh9-6b808382-364f-4801-8930-e5f86c76113c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U2NDc2MDVhLThlMmMtNGVkNy05OGFlLTc1NGE4ZDY3MmI2YVwvZGdmNnJoOS02YjgwODM4Mi0zNjRmLTQ4MDEtODkzMC1lNWY4NmM3NjExM2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OHn19pRTg-8ye3Grziai2nHvkPKIhY7XLAoWiCdInkE"
   },
   {
     "question": "Which character is famous for saying, 'Hakuna Matata'?",
     "options": ["Simba", "Timon", "Pumbaa", "Rafiki"],
     "answer": "Pumbaa",
-    "img": "./img/lionking.jpg"
+    "img": "https://wallpapers.com/images/hd/the-lion-king-hakuna-matata-p8gf461uh18lp0gu.jpg"
   },
   {
     "question": "Which Disney character is known for having a magic carpet?",
-    "options": ["Cinderella", "Ariel", "Belle", "Jasmine"],
-    "answer": "Jasmine",
+    "options": ["Belle", "Ariel", "Aladdin", "Jasmine"],
+    "answer": "Aladdin",
     "img": "https://i.pinimg.com/736x/92/4e/8d/924e8d22de3eb19a420788917b8e1b62.jpg"
   },
   {
     "question": "What is the name of the city in The Incredibles?",
     "options": ["Metroville", "Incredipolis", "Supercity", "Villopolis"],
     "answer": "Metroville",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VLUmzhDEkGMa5LTRpEh6yhKSQZ2C36IrnKriUDYlnvqnyt1JvPoTJc2fhipeVRIZb-8&usqp=CAU"
+    "img": "https://static01.nyt.com/images/2018/06/17/arts/17INCREDIBLES3/17INCREDIBLES3-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
   },
   {
     "question": "What animal is the sidekick of Timon in The Lion King?",
@@ -216,10 +216,10 @@
     "img": "https://w0.peakpx.com/wallpaper/958/515/HD-wallpaper-tangled-rapunzel-new-rapunzel-tangled-thumbnail.jpg"
   },
   {
-    "question": "In which movie would you find the character 'Scar'?",
-    "options": ["The Lion King", "Mulan", "Frozen", "Pocahontas"],
+    "question": "What is the name of the villain in 'The Lion King'?",
+    "options": ["Jafar", "Yzma", "Scar", "Hades"],
     "answer": "The Lion King",
-    "img": "./img/scar.jpg"
+    "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1dbaaede-aea5-4365-b372-b4bfe8950a4b/dgb414a-b4b6b71a-600e-401a-8276-88a1da2bdd4e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFkYmFhZWRlLWFlYTUtNDM2NS1iMzcyLWI0YmZlODk1MGE0YlwvZGdiNDE0YS1iNGI2YjcxYS02MDBlLTQwMWEtODI3Ni04OGExZGEyYmRkNGUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1NVxlo14RSn0EpntxSu6KH4LCVx5VTVYB3gxqe2MFvE"
   },
   {
     "question": "What animal is Dumbo's best friend?",
@@ -246,34 +246,34 @@
     "img": "https://www.pngplay.com/wp-content/uploads/12/Moana-Disney-PNG-Clipart-Background.png"
   },
   {
-    "question": "What type of animal is Bambi’s friend Thumper??",
+    "question": "What type of animal is Bambi's friend Thumper??",
     "options": ["Squirrel", "Rabbit", "Fox", "Deer"],
     "answer": "Rabbit",
-    "img": "https://3dmodels.org/wp-content/uploads/2023/08/29/Bambi_3d_model_1000_0001.jpg"
+    "img": "https://t4.ftcdn.net/jpg/07/50/34/01/360_F_750340111_j7c72t8dkCstcnETOe5lryQfW5kvnZBx.jpg"
   },
   {
     "question": "Who is the villain in Aladdin?",
     "options": ["Jafar", "Scar", "Ursula", "Maleficent"],
     "answer": "Jafar",
-    "img": "https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/1690599064_Jafar8.png&width=600&height=600&quality=90&format=auto&fit=pad"
+    "img": "https://static1.srcdn.com/wordpress/wp-content/uploads/2019/08/Jafar.jpg"
   },
   {
     "question": "What is the name of the dog in The Fox and the Hound?",
     "options": ["Copper", "Tramp", "Balto", "Bolt"],
     "answer": "Copper",
-    "img": "./img/copper.png"
+    "img": "https://ew.com/thmb/CJnmA-PqjCPZh8dthr5Mur8GfD8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fox-hound-39cb3888f3374bf79a9125f922369705.jpg"
   },
   {
     "question": "Who is the main character in the movie Tangled?",
     "options": ["Ariel", "Rapunzel", "Belle", "Aurora"],
     "answer": "Rapunzel",
-    "img": "https://images.fineartamerica.com/images/artworkimages/medium/3/disney-tangled-classic-title-logo-suyaod-laine-transparent.png"
+    "img": "https://i.pinimg.com/736x/9d/86/7f/9d867f26c664a6d71674cd1059719c5b.jpg"
   },
   {
     "question": "What does the magic lamp in Aladdin contain?",
     "options": ["A genie", "A fairy", "A wizard", "A princess"],
     "answer": "A genie",
-    "img": "https://i.pinimg.com/originals/6f/2f/c2/6f2fc2b996e45d05d355432919894b8c.png"
+    "img": "https://rukminim2.flixcart.com/image/850/1000/kz4gh3k0/poster/6/s/o/medium-disney-aladdin-movie-matte-finish-poster-posterpoint9486-original-imagb786emesqgfn.jpeg?q=20&crop=false"
   },
   {
     "question": "What is the name of the princess in The Princess and the Frog?",
@@ -285,11 +285,11 @@
     "question": "What is the name of Simba's best friend in The Lion King?",
     "options": ["Pumbaa", "Timon", "Nala", "Zazu"],
     "answer": "Nala",
-    "img": "https://i.pinimg.com/736x/09/26/f7/0926f7f2d9c989b9cae4a8c2bb8acdc8.jpg"
+    "img": "https://i.pinimg.com/736x/c1/9b/b0/c19bb05511b22b23dd70196ff8c5da26.jpg"
   },
   {
     "question": "Which character says, 'Just keep swimming'?",
-    "options": ["Marlin", "Dory", "Nemo", "Squirt"],
+    "options": ["Marlin", "Nemo", "Dory", "Squirt"],
     "answer": "Dory",
     "img": "https://images.sr.roku.com/idType/roku/context/global/id/c40a5f5005fa50eb8afc4a832be9cf0e/images/gracenote/assets/p31890_k_v12_ab.jpg/magic/396x0/filters:quality(70)"
   },
@@ -297,7 +297,7 @@
     "question": "In Beauty and the Beast, what is the name of the enchanted candelabra?",
     "options": ["Cogsworth", "Lumière", "Maurice", "Gaston"],
     "answer": "Lumière",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDcE_8-xJ5G65Wnl9kubc5mkXWFkgJYJB_4RO_yvUrGdS3aNEgVazOWgZI0KsWpyskjg&usqp=CAU"
+    "img": "https://media.vanityfair.com/photos/58b81cebf2a983252a4f0d5b/16:9/w_1280,c_limit/beauty-and-the-beast-lumiere-cogsworth.jpg"
   },
   {
     "question": "What is the name of the main antagonist in 'The Incredibles'?",
@@ -309,41 +309,41 @@
     "question": "Which Disney princess has a raccoon as a sidekick?",
     "options": ["Rapunzel", "Mulan", "Ariel", "Pocahontas"],
     "answer": "Pocahontas",
-    "img": "https://www.disneyclips.com/images/images/meeko-flit2.png"
+    "img": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7a50fa67-55da-4665-9688-9c5f3c25e0aa/width=450/00000-2999771269.jpeg"
   },
   {
-    "question": "In 'Finding Nemo', what is the name of Nemo’s dad?",
+    "question": "In 'Finding Nemo', what is the name of Nemo's dad?",
     "options": ["Dory", "Marlin", "Bruce", "Nigel"],
     "answer": "Marlin",
-    "img": "https://i.pinimg.com/474x/71/58/28/7158281640733e941b8f81e1d235225b.jpg"
+    "img": "https://i.ebayimg.com/images/g/x4MAAOSw-e5gClHH/s-l1200.jpg"
   },
   {
     "question": "In 'Cinderella', what is the name of the prince?",
     "options": ["Prince Philip", "Prince Charming", "Prince Eric", "Prince Adam"],
     "answer": "Prince Charming",
-    "img": "https://m.media-amazon.com/images/I/51bpiaXlqjL.jpg"
+    "img": "https://cinderelladecoded.wordpress.com/wp-content/uploads/2017/03/d7ac12cd37b4cbaddd026a39e1915b691.jpg"
   },
   {
     "question": "In 'Moana', what is the name of the demigod who helps Moana on her journey?",
     "options": ["Maui", "Pua", "Tamatoa", "Te Fiti"],
     "answer": "Maui",
-    "img": "https://cdn.media.amplience.net/i/partycity/775608?$pdpSmall$&fmt=auto&qlt=default"
+    "img": "https://i5.walmartimages.com/asr/562a3d16-77c9-4822-85d1-255d1f224f04.ec484693c6394fb941bfffe156aa3f76.jpeg"
   },
   {
-    "question": "Which character says, 'Just keep swimming'?",
-    "options": ["Marlin", "Dory", "Nemo", "Squirt"],
-    "answer": "Dory",
-    "img": "https://images.sr.roku.com/idType/roku/context/global/id/c40a5f5005fa50eb8afc4a832be9cf0e/images/gracenote/assets/p31890_k_v12_ab.jpg/magic/396x0/filters:quality(70)"
+    "question": "What is the name of the kingdom where Elsa and Anna live in Disney's Frozen?",
+    "options": ["Montunui", "Corona", "Atlantica","Arendelle"],
+    "answer": "Arendelle",
+    "img": "https://icon2.cleanpng.com/20231217/rti/transparent-ice-palace-ice-castle-winter-holiday-frozen-castle-iconic-ice-castle-symbolizing-winter-holiday-1710970320913.webp"
   },
   {
-    "question": "What is the name of Simba’s father in 'The Lion King'?",
-    "options": ["Mufasa", "Scar", "Rafiki", "Timon"],
+    "question": "What is the name of Simba's father in 'The Lion King'?",
+    "options": ["Timon", "Scar", "Rafiki", "Mufasa"],
     "answer": "Mufasa",
-    "img": "https://www.disneyclips.com/images/images/mufasa-simba.png"
+    "img": "https://steamuserimages-a.akamaihd.net/ugc/1007059018470468881/654D06A36A353C75CB2A77A16B62F500B7E029A1/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
   },
   {
     "question": "What is the name of the dragon in 'Mulan'?",
-    "options": ["Mushu", "Khan", "Shan Yu", "Cri-Kee"],
+    "options": ["Cri-Kee", "Khan", "Shan Yu", "Mushu"],
     "answer": "Mushu",
     "img": "https://images.fineartamerica.com/images/artworkimages/medium/3/mushu-fan-art-3d-sculpture-kelly-johnson.jpg"
   },
@@ -352,5 +352,137 @@
     "options": ["Rémy", "Emile", "Django", "Linguini"],
     "answer": "Rémy",
     "img": "https://ih1.redbubble.net/image.5192560044.0470/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+  },
+  {
+    "question": "What is the name of the princess in Disney's Sleeping Beauty?",
+    "options": ["Aurora", "Belle", "Cinderella", "Rapunzel"],
+    "answer": "Aurora",
+    "img": "https://i.pinimg.com/736x/27/41/95/274195d72021022b5a8945569e780812.jpg"
+  },
+  {
+    "question": "In Beauty and the Beast, what is the name of Belle's father?",
+    "options": ["Philippe", "Gaston", "Lumière", "Maurice"],
+    "answer": "Maurice",
+    "img": "https://i.pinimg.com/736x/16/c0/b6/16c0b6cbb774a278add0377a1825bd4b.jpg"
+  },
+  {
+    "question": "Who was the first Disney princess?",
+    "options": ["Belle", "Cinderella", "Aurora", "Snow White"],
+    "answer": "Snow White",
+    "img": "https://www.ed92.org/wp-content/uploads/2021/10/2018-Disney-Princess-group-disney-princess-41419364-3347-2438_600x600.jpg"
+  },
+  {
+    "question": "Who is the villain in Disney's The Hunchback of Notre Dame?",
+    "options": ["Maleficent", "Scar", "Frollo", "Jafar"],
+    "answer": "Frollo",
+    "img": "https://i.ebayimg.com/images/g/oIYAAOSwhqFeLKFu/s-l400.jpg"
+  },
+  {
+    "question": "What is the name of the red-haired princess in Disney's Brave?",
+    "options": ["Moana", "Ariel", "Merida", "Elsa"],
+    "answer": "Merida",
+    "img": "https://i5.walmartimages.com/seo/Merida-Disney-Princess-Friendship-Adventures_09a619b6-6d47-4fd4-b4e5-db2395255fdd.bbf290f4bf32bde02a5e5bfa7c504f9b.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+  },
+  {
+    "question": "What is the name of the witch in Disney's Snow White?",
+    "options": ["Lady Tremaine", "Maleficent", "Ursula", "Evil Queen"],
+    "answer": "Evil Queen",
+    "img": "https://www.nicepng.com/png/detail/131-1319982_evil-queen-png-snow-white-evil-queen-clipart.png"
+  },
+  {
+    "question": "What is the name of the boat in Peter Pan?",
+    "options": ["Nautilus", "Black Pearl", "Jolly Roger", "The Ark"],
+    "answer": "Jolly Roger",
+    "img": "https://i.pinimg.com/736x/65/9c/67/659c678cfc2ecbdee5029a72999d3ff6.jpg"
+  },
+  {
+    "question": "In 'Ratatouille', what is the name of the rat who dreams of becoming a chef?",
+    "options": ["Rémy", "Emile", "Django", "Linguini"],
+    "answer": "Rémy",
+    "img": "https://ih1.redbubble.net/image.5192560044.0470/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+  },
+  {
+    "question": "What is the name of the dog in the movie Up?",
+    "options": ["Dug", "Percy", "Bolt", "Pongo"],
+    "answer": "Dug",
+    "img": "https://i.pinimg.com/originals/e3/44/e3/e344e328491ad0df5379fb4b448bb9a7.jpg"
+  },
+  {
+    "question": "In which Disney movie would you find the character named 'Tiana'?",
+    "options": ["The Little Mermaid", "Cinderella", "The Princess and the Frog", "Tangled"],
+    "answer": "The Princess and the Frog",
+    "img": "https://i.pinimg.com/474x/0c/cf/aa/0ccfaab8a5b018f78cd7d4a014112cbd.jpg"
+  },
+  {
+    "question": "Who is the rabbit character in Disney's Alice in Wonderland?",
+    "options": ["Thumper", "Peter Rabbit", "White Rabbit", "Bugs Bunny"],
+    "answer": "White Rabbit",
+    "img": "https://m.media-amazon.com/images/I/71x4S4TNvHL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "question": "What is the name of Mickey Mouse's dog?",
+    "options": ["Pluto", "Goofy", "Max", "Poochie"],
+    "answer": "Pluto",
+    "img": "https://wallpapers.com/images/hd/disney-pluto-and-mickey-mouse-j6014vwg2pm949qx.jpg"
+  },
+  {
+    "question": "What is the name of Goofy's son?",
+    "options": ["Morty", "Huey", "Max", "Goofy Jr."],
+    "answer": "Max",
+    "img": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9e2fa301-3f08-4c43-b146-1ecea357e979/width=450/00890-3116306826.jpeg"
+  },
+  {
+    "question": "What color is Mickey Mouse's shorts?",
+    "options": ["Green", "Blue", "Yellow", "Red"],
+    "answer": "Red",
+    "img": "https://i.pinimg.com/736x/b4/46/b7/b446b7c6ef225aebf2142aeac3f4ee03.jpg"
+  },
+  {
+    "question": "What is the name of Mickey Mouse's rival who is often portrayed as his nemesis?",
+    "options": ["Chip", "Max", "Pete", "Louie"],
+    "answer": "Pete",
+    "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d9de44dc-4f01-43af-8fb0-126ee0e2ecb6/de3ttg5-6ba93583-7333-43ab-af3b-97a87b32b68d.jpg/v1/fill/w_790,h_1012,q_70,strp/peg_leg_pete_by_devilkais_de3ttg5-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA3MSIsInBhdGgiOiJcL2ZcL2Q5ZGU0NGRjLTRmMDEtNDNhZi04ZmIwLTEyNmVlMGUyZWNiNlwvZGUzdHRnNS02YmE5MzU4My03MzMzLTQzYWItYWYzYi05N2E4N2IzMmI2OGQuanBnIiwid2lkdGgiOiI8PTgzNiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.CVYnWcNoHkH3R6M6JMrdBJ5oxjqTtfRtgfDMBGzUxP4"
+  },
+  {
+    "question": "What is the name of Donald Duck's three nephews?",
+    "options": ["Peter, Paul, and Jack", "Max, Timmy, and Billy", "Huey, Dewey, and Louie", "Timmy, Tommy, and Jerry"],
+    "answer": "Huey, Dewey, and Louie",
+    "img": "https://68.media.tumblr.com/ff378ffe52ea0f0440fb4b370e8ae646/tumblr_ovtwniaSzg1qhb9e4o1_1280.png"
+  },
+  {
+    "question": "What is the name of Donald Duck's wealthy uncle?",
+    "options": ["Scrooge McDuck", "Uncle Goofy", "Uncle Pete", "Uncle Max"],
+    "answer": "Scrooge McDuck",
+    "img": "https://i.redd.it/my-scrooge-mcduck-ai-pictured-v0-kzg0ybrzkl3c1.jpg?width=1024&format=pjpg&auto=webp&s=f2b19e51a5e317258ba6afa3b990316f52a312d5"
+  },
+  {
+    "question": "Which Disney princess was raised by three fairies named Flora, Fauna, and Merryweather?",
+    "options": ["Snow White", "Cinderella", "Sleeping Beauty", "Belle"],
+    "answer": "Sleeping Beauty",
+    "img": "https://i.etsystatic.com/26552447/r/il/615067/2794534423/il_1080xN.2794534423_mx8o.jpg"
+  },
+  {
+    "question": "Which Disney movie features a character named 'Yzma', who is transformed into a cat?",
+    "options": ["The Emperor's New Groove", "Mulan", "Hercules", "Pocahontas"],
+    "answer": "The Emperor's New Groove",
+    "img": "https://i.pinimg.com/736x/ff/fd/d0/fffdd0c1d8aff74433b1257fe2cfc039.jpg"
+  },
+  {
+    "question": "What is the name of Simba's mother in 'The Lion King'?",
+    "options": ["Sarabi", "Nala", "Shenzi", "Rafiki"],
+    "answer": "Sarabi",
+    "img": "https://i.pinimg.com/1200x/ac/ee/aa/aceeaa2e962034da9fd7c16193612db7.jpg"
+  },
+  {
+    "question": "What is the primary method Kaa, the snake from *The Jungle Book*, uses to hypnotize his prey?",
+    "options": ["Singing a lullaby", "Using his hypnotic eyes", "Hissing a soothing sound", "Wrapping them tightly"],
+    "answer": "Using his hypnotic eyes",
+    "img": "https://c8.alamy.com/comp/RYHBKX/mowgli-kaa-the-snake-the-jungle-book-1967-RYHBKX.jpg"
+  },
+  {
+    "question": "What is Shere Khan afraid of?",
+    "options": ["Elephants", "Snakes", "Fire", "Wolves"],
+    "answer": "Fire",
+    "img": "https://www.artnet.com/WebServices/images/ll17246lldJmyJFg3okR3CfDrCWvaHBOcTBSG/walt-disney-studios-the-jungle-book-shere-khan-and-kaa-production-cel-setup-(walt-disney,-1967).jpg"
   }
 ]

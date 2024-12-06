@@ -10,4 +10,5 @@ export class QuizState{
   score = 0
   clock = null
   timerStates = {}
+  finished = false;
 }
