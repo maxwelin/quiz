@@ -34,7 +34,7 @@ body{
   display: grid;
   grid-template-columns: 400px 40px;
   grid-template-rows: 9px 600px 9px;
-  background-image: url("https://files.oaiusercontent.com/file-15vfpSqs2VuDaKzCZJRJdc?se=2024-12-06T10%3A09%3A55Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddc96d2df-39f1-4b78-8d49-24845fecd2e1.webp&sig=7eGmdD9qwXy05Tgsm5iWZmrqtVw5zxDMgTirI6bDSwg%3D");
+  background-image: url("/img/cover.jpg");
   object-fit: cover;
   background-size: 100%;
   border-top-right-radius: 20px;
