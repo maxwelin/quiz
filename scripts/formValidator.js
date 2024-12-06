@@ -33,14 +33,13 @@ export default class FormValidator{
     timer.style.visibility = "hidden"
 
     document.getElementById(`correct-stamp-${id}`).classList.add("active")
-    // document.getElementById(`hand-${id}`).classList.add("active")
+    document.getElementById(`thumb-${id}`).classList.add("active")
     button.setAttribute("disabled", "true")
-    // this.playSlapSound()
     this.playJingleSound()
 
     setTimeout(() => {
-      document.getElementById(`hand-${id}`).classList.remove("active")
-    }, 450)
+      document.getElementById(`thumb-${id}`).classList.remove("active")
+    }, 700)
   }
 
   wrongAnswer = (id, button) => {
@@ -56,7 +55,7 @@ export default class FormValidator{
 
     setTimeout(() => {
       document.getElementById(`hand-${id}`).classList.remove("active")
-    }, 450)
+    }, 500)
   }
 
   timesUp = (id) => {

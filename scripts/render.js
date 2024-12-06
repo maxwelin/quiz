@@ -52,7 +52,7 @@ export default class Render{
   createCover = () => {
     const cover = this.createElementWithAttribute("div", "id", "cover")
     const title = this.createElementWithAttribute("h1", "id", "title")
-    const img = this.createElementWithAttribute("img", "src", "https://www.nhmagazine.com/content/uploads/2021/02/disney-castle-scaled.jpg")
+    const img = this.createElementWithAttribute("img", "src", "../img/cover.jpg");
     const p = this.createElementWithInnerText("p", "Quizney??")
 
     title.innerText = "DISNEY QUIZ"
@@ -215,6 +215,7 @@ export default class Render{
     const page = this.createElementWithAttribute("div", "class", "page")
     const img = this.createElementWithAttribute("img", "id", "background-image")
     const hand = this.createElementWithAttribute("img", "id", `hand-${id}`)
+    const thumb = this.createElementWithAttribute("img", "id", `thumb-${id}`)
     const correctStamp = this.createElementWithAttribute("img", "id", `correct-stamp-${id}`)
     const wrongStamp = this.createElementWithAttribute("img", "id", `wrong-stamp-${id}`)
     const answerP = this.createElementWithInnerText("p", `${answer}`)
@@ -235,11 +236,13 @@ export default class Render{
     wrongStamp.className = "stamp"
     hand.setAttribute("src", "../img/hand.png")
     hand.className = "hand"
+    thumb.setAttribute("src", "../img/thumb.png")
+    thumb.className = "thumb"
     img.setAttribute("src", imgUrl)
 
     this.createAnswerForm(page, options, this.pageCount, correctAnswer, answerP, id)
 
-    page.append(correctAnswer, timerP, answerP, img, correctStamp, wrongStamp, hand)
+    page.append(correctAnswer, timerP, answerP, img, correctStamp, wrongStamp, hand, thumb)
     document.getElementById("book").appendChild(page)
   }
 

@@ -25,44 +25,46 @@ body{
   width: 90vw;
   height: 90vh;
   background-color: white;
+  /* background-image: url("https://files.oaiusercontent.com/file-LgbzuT5J6BSQ6L32cfyuQV?se=2024-12-05T23%3A40%3A59Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D55718e1b-8d50-4d4f-8564-600fe6cb709b.webp&sig=Z04PHz3/hmYxD3Kr0fIJipCxZ3taY7fRANJKeJna3RA%3D"); */
+  object-fit: cover;
 }
 
 #book{
   position: relative;
   display: grid;
   grid-template-columns: 400px 40px;
-  grid-template-rows: 10px 600px 10px;
-  background-image: url("https://www.nhmagazine.com/content/uploads/2021/02/disney-castle-scaled.jpg");
+  grid-template-rows: 9px 600px 9px;
+  background-image: url("https://files.oaiusercontent.com/file-15vfpSqs2VuDaKzCZJRJdc?se=2024-12-06T10%3A09%3A55Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddc96d2df-39f1-4b78-8d49-24845fecd2e1.webp&sig=7eGmdD9qwXy05Tgsm5iWZmrqtVw5zxDMgTirI6bDSwg%3D");
   object-fit: cover;
   background-size: 100%;
-  border-left: 2px solid black;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   max-width: 500px;
   transform: rotateY(0);
   transform-origin: left;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-top:1px solid black;
-  border-right:1px solid black;
-  border-bottom:1px solid black;
-  margin-bottom: 10px;;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+  /* border-top:2px solid black;
+  border-right:2px solid black;
+  border-bottom:2px solid black; */
+  margin-bottom: 30px;;
 }
 
 #book:after {
-  background: radial-gradient(circle, #3a86ff, #023e8a);
+  /* background-image: url("https://files.oaiusercontent.com/file-XUwNHWBiSM7P69gHaARFWn?se=2024-12-06T09%3A56%3A29Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddef71d44-77d1-4f26-b15a-ad04d01cf1dd.webp&sig=RDxOOZTr5JH9Uv2ZOZWDocaHlrp0PQFA6ReC4fbFFYA%3D"); */
+  background-image: url("./img/after.png");
   bottom: 0;
   content: '';
-  left: -50px;
+  left: -52px;
   position: absolute;
-  top: -1px;
-  width: 40px;
-  height: 618px;
+  top: 0px;
+  width: 52px;
+  height: 617px;
   z-index: -10000;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-top:2px solid black;
-  border-left:2px solid black;
-  border-bottom:2px solid black;
-  border-right:10px solid rgb(0, 0, 0);
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+  /* border-top:2px solid black;
+  border-left: 2px solid black;
+  border-bottom:2px solid black; */
+  /* border-right:13px solid rgba(0, 0, 0, 0.1); */
 }
 
 #cover::after {
@@ -71,9 +73,9 @@ body{
   content: '';
   left: -20px;
   position: absolute;
-  top: -2px;
+  top: 0px;
   width: 20px;
-  height: 622px;
+  height: 617;
   z-index: -1000;
   visibility: var(--after-visibility, hidden);
 }
@@ -93,7 +95,7 @@ body{
 #cover{
   max-width: 100%;
   max-height: 100%;
-  background-color: lightskyblue;
+  background-color: #fdf7d9;
   color: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -104,14 +106,15 @@ body{
   z-index: 1;
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
-  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-top:1px solid black;
+  box-shadow: -15px 15px 10px rgba(0, 0, 0, 0.5);
+  /* border-top:1px solid black;
   border-right:1px solid black;
-  border-bottom:1px solid black;
+  border-bottom:1px solid black; */
 }
 
 #cover img{
   position: absolute;
+  opacity: 1;
   bottom: 0;
   width: 100%;
   height: 100%;
@@ -127,29 +130,30 @@ body{
   padding: 50px;
   text-align: center;
   font-family: "Walter", "EB Garamond", serif;
-  color: rgb(255, 255, 255);
+  color: #fae4df;
   text-align: center;
   text-shadow: 
-    0 0 5px #0ff,  
-    0 0 10px #0ff, 
-    0 0 20px #0ff,
-    0 0 40px #0ff,
-    0 0 80px #0ff;
+    0 0 5px #f997ce,  
+    0 0 10px #f997ce, 
+    0 0 20px #f997ce,
+    0 0 40px #f997ce,
+    0 0 80px #f997ce;
 }
 
 #cover p{
   font-size: 2em;
+  font-weight: bold;
   padding: 50px;
   text-align: center;
   font-family: "Walter", "EB Garamond", serif;
-  color: rgb(255, 255, 255);
+  color: #fae4df;
   text-align: center;
   text-shadow: 
-    0 0 5px #0ff,  
-    0 0 10px #0ff, 
-    0 0 20px #0ff,
-    0 0 40px #0ff,
-    0 0 80px #0ff;
+  0 0 5px #f997ce,  
+    0 0 10px #f997ce, 
+    0 0 20px #f997ce,
+    0 0 40px #f997ce,
+    0 0 80px #f997ce;
 }
 
 .page{
@@ -330,6 +334,25 @@ label {
 
 .hand.active{
   transform: scale(0.5);
+  transition: transform 0.3s;
+  visibility: visible !important;
+}
+
+.thumb{
+  opacity: 1;
+  width: 600px;
+  height: 600px ;
+  transform: rotate(50deg);
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  transform-origin: bottom;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.thumb.active{
+  transform: scale(0.4);
   transition: transform 0.3s;
   visibility: visible !important;
 }
