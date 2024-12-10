@@ -1,0 +1,297 @@
+@media screen and (width < 1200px) {
+
+  #root{
+    width: 800px;
+    height: 640px;
+  }
+  
+  #book{
+    grid-template-columns: 320px 32px;
+    grid-template-rows: 7.2px 480px 7.2px;
+    margin-left: 352px;
+  }
+
+  #book:after{
+    height: 493px;
+    width: 41.6px;
+    left: -41.6px;
+  }
+
+  #title{
+    font-size: 4em;
+  }
+
+  #cover p{
+    font-size: 1.8em;
+    padding: 0px;
+  }
+  
+  .page {
+    height: 480px;
+    width: 320px;
+  }
+
+  .page p{
+    font-size: 1.76em;
+    padding: 4px;
+  }
+
+  .page label{
+    padding: 4px;
+    font-size: 1.44em;
+  }
+
+  .answer-form{
+    margin-bottom: 16px;
+  }
+
+  .button {
+    width: 80px;
+    width: 32;
+    font-size: 1.12em;
+  }
+
+  .submit-btn {
+    width: 80px;
+    height: 32px;
+    font-size: 1.12em;
+  }
+
+  .stamp{
+    width: 480px;
+    height: 480px;
+    left: 78px;
+    bottom: -140px;
+  }
+
+  .hand{
+    width: 480px;
+    height: 480px;
+    bottom: -190px;
+  }
+
+  .thumb{
+    width: 480px;
+    height: 480px;
+    bottom: 50px;
+    left: 80px;
+  }
+
+  #score-p{
+    font-size: 2.4em;
+  }
+
+  .timer{
+    font-size: 11em !important;
+    top: 140px;
+    left: 115px
+  }
+
+  #btn-container{
+    width: 400px;
+  }
+}
+
+@media screen and (width < 900px) {
+
+  #root {
+    width: 640px;
+    height: 512px;
+}
+
+#book {
+    grid-template-columns: 256px 25.6px;
+    grid-template-rows: 5.76px 384px 5.76px;
+    margin-left: 281.6px;
+}
+
+#book:after {
+    height: 394.4px;
+    width: 33.28px;
+    left: -33.28px;
+}
+
+#title {
+    font-size: 3.2em;
+}
+
+#cover p {
+    font-size: 1.44em;
+    padding: 0px;
+}
+
+.page {
+    height: 384px;
+    width: 256px;
+}
+
+.page p {
+    font-size: 1.408em;
+    padding: 3.2px;
+}
+
+.page label {
+    padding: 3.2px;
+    font-size: 1.152em;
+}
+
+.answer-form {
+    margin-bottom: 12.8px;
+}
+
+.button {
+    width: 64px;
+    height: 25.6px;
+    font-size: 0.896em;
+}
+
+.submit-btn {
+    width: 64px;
+    height: 25.6px;
+    font-size: 0.896em;
+}
+
+.stamp {
+    width: 384px;
+    height: 384px;
+    left: 64px;
+    bottom: -120px
+}
+
+.hand {
+    width: 384px;
+    height: 384px;
+    bottom: -152px;
+}
+
+.thumb {
+    width: 384px;
+    height: 384px;
+    bottom: 40px;
+    left: 64px;
+}
+
+#score-p {
+    font-size: 1.92em;
+}
+
+.timer {
+    font-size: 8.8em !important;
+    top: 112px;
+    left: 92px;
+}
+
+#btn-container {
+    width: 320px;
+}
+}
+
+@media screen and (width < 730px) {
+
+  #root {
+    width: 500px;
+    height: 512px;
+    align-items: start;
+    margin: 0 0;
+    margin-top: 20vh;
+}
+
+#book {
+    grid-template-columns: 256px 25.6px;
+    grid-template-rows: 5.76px 384px 5.76px;
+    margin-left: 20vw;
+}
+
+#book:after {
+    height: 394.4px;
+    width: 33.28px;
+    left: -33.28px;
+}
+
+#title {
+    font-size: 3.2em;
+}
+
+#cover p {
+    font-size: 1.44em;
+    padding: 0px;
+}
+
+#cover::after{
+  width: 10px;
+}
+
+#cover::before{
+  width: 10px;
+}
+
+.page {
+    height: 384px;
+    width: 256px;
+}
+
+.page p {
+    font-size: 1.408em;
+    padding: 3.2px;
+}
+
+.page label {
+    padding: 3.2px;
+    font-size: 1.152em;
+}
+
+.answer-form {
+    margin-bottom: 12.8px;
+}
+
+.button {
+    width: 64px;
+    height: 25.6px;
+    font-size: 0.896em;
+}
+
+.submit-btn {
+    width: 64px;
+    height: 25.6px;
+    font-size: 0.896em;
+}
+
+.stamp {
+    width: 384px;
+    height: 384px;
+    left: 64px;
+    bottom: -120px
+}
+
+.hand {
+    width: 384px;
+    height: 384px;
+    bottom: -152px;
+}
+
+.thumb {
+    width: 384px;
+    height: 384px;
+    bottom: 40px;
+    left: 64px;
+}
+
+#score-p {
+    font-size: 1.92em;
+}
+
+.timer {
+    font-size: 8.8em !important;
+    top: 112px;
+    left: 92px;
+}
+
+#btn-container {
+    width: 200px;
+    margin-left: 20vw
+}
+
+#open{
+  right: 40%
+}
+}

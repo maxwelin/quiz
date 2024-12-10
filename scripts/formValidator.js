@@ -2,30 +2,35 @@
 export default class FormValidator{
   constructor(quizState){
     this.quizState = quizState
-    this.slap = new Audio("../img/punch.wav")
-    this.jingle = new Audio("../img/success.mp3")
-    this.aww = new Audio("../img/aww.wav")
-    this.nice = new Audio("../img/nice.mp3")
-    this.clap = new Audio("../img/clap.wav")
-    this.wow = new Audio("../img/wow.wav")
-    this.hmm = new Audio("../img/hmm.m4a")
-    this.applause = new Audio("../img/applause.wav")
+    this.aww = new Audio("../media/sounds/aww.wav")
+    this.wow = new Audio("../media/sounds/wow.wav")
+    this.hmm = new Audio("../media/sounds/hmm.m4a")
+    this.nice = new Audio("../media/sounds/nice.mp3")
+    this.clap = new Audio("../media/sounds/clap.wav")
+    this.slap = new Audio("../media/sounds/punch.wav")
+    this.buzzer = new Audio("../media/sounds/buzzer.wav")
+    this.jingle = new Audio("../media/sounds/success.mp3")
+    this.applause = new Audio("../media/sounds/applause.wav")
   }
 
-  submitEventListener = (button, form, answerP, answer, id) => {
+  submitEventListener = (button, form, paragraph, answerP, id) => {
+    const answer = paragraph.innerHTML
     button.addEventListener("click", (e) => {
-      const next = document.getElementById("next")
-
       e.preventDefault()
+      
+      const next = document.getElementById("next")
       const formData = new FormData(form)
       const data = Object.fromEntries(formData.entries())
 
-      console.log(data.answer, answer.innerHTML)
-      
       if (!data.answer) {
-        alert("Please select an answer!")
+        paragraph.innerText = "Please select an answer!"
+        paragraph.style.visibility = "visible"
         return
-      } else if (data.answer == answer.innerHTML) {
+      }
+
+      paragraph.innerHTML = answer
+
+      if(data.answer == answerP.innerHTML) {
         this.quizState.score += 1
         this.correctAnswer(id, button)
         next.removeAttribute("disabled")
@@ -33,7 +38,7 @@ export default class FormValidator{
         this.wrongAnswer(id, button)
         next.removeAttribute("disabled")
       }
-      answer.style.visibility = "visible"
+      paragraph.style.visibility = "visible"
       answerP.style.visibility = "visible"
     })
   }
@@ -76,6 +81,9 @@ export default class FormValidator{
     const timer = document.getElementById(`timer-p-${id}`)
     const submitBtn = timer.parentNode.querySelector("form .submit-btn")
     const next = document.getElementById("next")
+    const answer = document.getElementById(`correct-answer-p-${id}`)
+
+    answer.innerHTML = "Correct answer:"
 
     timer.style.visibility = "hidden"
     submitBtn.setAttribute("disabled", true)
@@ -97,6 +105,10 @@ export default class FormValidator{
       this.slap.volume = 0.1
       this.slap.play()
     }, 60)
+    // setTimeout(() => {
+    //   this.buzzer.volume = 0.05
+    //   this.buzzer.play()
+    // }, 300)
   }
 
   playJingleSound(){

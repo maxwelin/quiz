@@ -3,7 +3,7 @@
     "question": "What is the name of the toy cowboy in Toy Story?",
     "options": ["Buzz Lightyear", "Woody", "Mr. Potato Head", "Slinky Dog"],
     "answer": "Woody",
-    "img": "https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-10n7ovy_9b42e613.jpeg"
+    "img": "https://www.disneyclips.com/images/images/abu-magic-lamp.png"
   },
   {
     "question": "In which Disney movie does the character Elsa appear?",
@@ -81,7 +81,7 @@
     "question": "What is the name of the snowman in Frozen?",
     "options": ["Kristoff", "Sven", "Marshmallow", "Olaf"],
     "answer": "Olaf",
-    "img": "https://wallpapers-clan.com/wp-content/uploads/2024/07/frozen-olaf-cute-disney-snowman-art-wallpaper-preview.jpg"
+    "img": "https://i.pinimg.com/736x/27/d3/f1/27d3f1a31246b207556401412b50ad99.jpg"
   },
   {
     "question": "What is the name of Aladdin's monkey?",
@@ -144,10 +144,10 @@
     "img": "https://ih1.redbubble.net/image.389381522.9522/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u5.jpg"
   },
   {
-    "question": "What is the name of the dog in Lady and the Tramp?",
-    "options": ["Dug", "Bolt", "Tramp", "Poochie"],
-    "answer": "Tramp",
-    "img": "https://i.pinimg.com/564x/09/fb/be/09fbbe2d741b748a86c09b6cb8dfdb41.jpg"
+    "question": "What type of dog is Lady in 'Lady and the Tramp'?",
+    "options": ["Golden Retriever", "Cocker Spaniel", "Poodle", "Beagle"],
+    "answer": "Cocker Spaniel",
+    "img": "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1500x1500/products/89810/96671/Disney-Lady-and-the-Tramp-Official-Cardboard-Cutout-buy-now-at-starstills__36957.1660127201.jpg?c=2"
   },
   {
     "question": "Who are the parents of the twins in The Incredibles?",
@@ -165,7 +165,7 @@
     "question": "What is the name of the villain in 101 Dalmatians?",
     "options": ["Cruella de Vil", "Maleficent", "Ursula", "Scar"],
     "answer": "Cruella de Vil",
-    "img": "https://ih1.redbubble.net/image.411129167.3054/flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg"
+    "img": "https://gabescave.com/cdn/shop/products/disney-villains-cruella-de-vil-1-cover-g-15-copy-variant-edition-middlet-516565_1200x1200.jpg?v=1706288120"
   },
   {
     "question": "In Pocahontas, what is the name of the Englishman who falls in love with Pocahontas?",
@@ -218,7 +218,7 @@
   {
     "question": "What is the name of the villain in 'The Lion King'?",
     "options": ["Jafar", "Yzma", "Scar", "Hades"],
-    "answer": "The Lion King",
+    "answer": "Scar",
     "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1dbaaede-aea5-4365-b372-b4bfe8950a4b/dgb414a-b4b6b71a-600e-401a-8276-88a1da2bdd4e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFkYmFhZWRlLWFlYTUtNDM2NS1iMzcyLWI0YmZlODk1MGE0YlwvZGdiNDE0YS1iNGI2YjcxYS02MDBlLTQwMWEtODI3Ni04OGExZGEyYmRkNGUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1NVxlo14RSn0EpntxSu6KH4LCVx5VTVYB3gxqe2MFvE"
   },
   {
@@ -240,10 +240,10 @@
     "img": "https://csrcollectibles.com/wp-content/uploads/2024/05/marycosta4.jpg"
   },
   {
-    "question": "Who is the main character in Moana?",
-    "options": ["Moana", "Ariel", "Jasmine", "Mulan"],
-    "answer": "Moana",
-    "img": "https://www.pngplay.com/wp-content/uploads/12/Moana-Disney-PNG-Clipart-Background.png"
+    "question": "What is the name of Moana's pet pig?",
+    "options": ["Pua", "Tui", "Heihei", "Maui"],
+    "answer": "Pua",
+    "img": "https://64.media.tumblr.com/bcfe1d8cb5381d44dcfee2e295f90fd8/tumblr_ohir2kLrSR1qm2o95o1_1280.jpg"
   },
   {
     "question": "What type of animal is Bambi's friend Thumper??",
@@ -282,8 +282,8 @@
     "img": "https://mystickermania.com/cdn/stickers/cartoons/princess-tiana-frog-512x512.png"
   },
   {
-    "question": "What is the name of Simba's best friend in The Lion King?",
-    "options": ["Pumbaa", "Timon", "Nala", "Zazu"],
+    "question": "What is the name of Simba's love interest in The Lion King?",
+    "options": ["Faline", "Kala", "Nala", "Zazu"],
     "answer": "Nala",
     "img": "https://i.pinimg.com/736x/c1/9b/b0/c19bb05511b22b23dd70196ff8c5da26.jpg"
   },
@@ -301,9 +301,9 @@
   },
   {
     "question": "What is the name of the main antagonist in 'The Incredibles'?",
-    "options": ["Syndrome", "Bomb Voyage", "Underminer", "Mirage"],
+    "options": ["Mirage", "Bomb Voyage", "Underminer", "Syndrome"],
     "answer": "Syndrome",
-    "img": "https://e1.pxfuel.com/desktop-wallpaper/561/857/desktop-wallpaper-still-geekin-out-about-it-syndrome-disney-pixars-the-incredibles-thumbnail.jpg"
+    "img": "https://wallpapercave.com/wp/wp7571793.jpg"
   },
   {
     "question": "Which Disney princess has a raccoon as a sidekick?",
@@ -387,7 +387,7 @@
     "question": "What is the name of the witch in Disney's Snow White?",
     "options": ["Lady Tremaine", "Maleficent", "Ursula", "Evil Queen"],
     "answer": "Evil Queen",
-    "img": "https://www.nicepng.com/png/detail/131-1319982_evil-queen-png-snow-white-evil-queen-clipart.png"
+    "img": "https://i.pinimg.com/736x/d5/07/eb/d507ebbffe218edbc0df4b29720c0078.jpg"
   },
   {
     "question": "What is the name of the boat in Peter Pan?",
@@ -421,7 +421,7 @@
   },
   {
     "question": "What is the name of Mickey Mouse's dog?",
-    "options": ["Pluto", "Goofy", "Max", "Poochie"],
+    "options": ["Pluto", "Goofy", "Duplo", "Poochie"],
     "answer": "Pluto",
     "img": "https://wallpapers.com/images/hd/disney-pluto-and-mickey-mouse-j6014vwg2pm949qx.jpg"
   },
@@ -451,7 +451,7 @@
   },
   {
     "question": "What is the name of Donald Duck's wealthy uncle?",
-    "options": ["Scrooge McDuck", "Uncle Goofy", "Uncle Pete", "Uncle Max"],
+    "options": ["Scrooge McDuck", "Uncle McDuck", "Uncle Ducky", "Uncle McQuack"],
     "answer": "Scrooge McDuck",
     "img": "https://i.redd.it/my-scrooge-mcduck-ai-pictured-v0-kzg0ybrzkl3c1.jpg?width=1024&format=pjpg&auto=webp&s=f2b19e51a5e317258ba6afa3b990316f52a312d5"
   },
@@ -474,7 +474,7 @@
     "img": "https://i.pinimg.com/1200x/ac/ee/aa/aceeaa2e962034da9fd7c16193612db7.jpg"
   },
   {
-    "question": "What is the primary method Kaa, the snake from *The Jungle Book*, uses to hypnotize his prey?",
+    "question": "What is the primary method Kaa, the snake from 'The Jungle Book', uses to hypnotize his prey?",
     "options": ["Singing a lullaby", "Using his hypnotic eyes", "Hissing a soothing sound", "Wrapping them tightly"],
     "answer": "Using his hypnotic eyes",
     "img": "https://c8.alamy.com/comp/RYHBKX/mowgli-kaa-the-snake-the-jungle-book-1967-RYHBKX.jpg"
@@ -484,5 +484,11 @@
     "options": ["Elephants", "Snakes", "Fire", "Wolves"],
     "answer": "Fire",
     "img": "https://www.artnet.com/WebServices/images/ll17246lldJmyJFg3okR3CfDrCWvaHBOcTBSG/walt-disney-studios-the-jungle-book-shere-khan-and-kaa-production-cel-setup-(walt-disney,-1967).jpg"
+  },
+  {
+    "question": "What is Bruce's famous motto in 'Finding Nemo'?",
+    "options": ["Always swim in schools.", "Sharks rule the ocean.", "Fish are friends, not food.", "Never trust a fish."],
+    "answer": "Fish are friends, not food.",
+    "img": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/4306/1374306-i-4c72f58fe310"
   }
 ]

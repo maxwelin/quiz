@@ -1,18 +1,25 @@
+
+
 @font-face {
   font-family: Walter;
-  src: url("./walter/Walter.ttf");
+  src: url("../media/fonts/walter/Walter.ttf");
 }
 @font-face {
   font-family: Disney;
-  src: url("./disney/Disney.ttf");
+  src: url("../media/fonts/disney/Disney.ttf");
 }
 @font-face {
   font-family: Cartoon;
-  src: url("./cartoon_toy/CartoonToy-Regular.ttf");
+  src: url("../media/fonts/cartoon_toy/CartoonToy-Regular.ttf");
 }
 
 body{
   text-shadow: 1px 1px 2px white;
+  background-image: url("../media/img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 #root{
@@ -21,12 +28,14 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: auto;
-  width: 90vw;
-  height: 90vh;
-  background-color: white;
-  /* background-image: url("https://files.oaiusercontent.com/file-LgbzuT5J6BSQ6L32cfyuQV?se=2024-12-05T23%3A40%3A59Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D55718e1b-8d50-4d4f-8564-600fe6cb709b.webp&sig=Z04PHz3/hmYxD3Kr0fIJipCxZ3taY7fRANJKeJna3RA%3D"); */
-  object-fit: cover;
+  margin: 5vw 15vw;
+  width: 1000px;
+  height: 800px;
+  background: rgba(255, 255, 255, 0.44);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 #book{
@@ -34,12 +43,11 @@ body{
   display: grid;
   grid-template-columns: 400px 40px;
   grid-template-rows: 9px 600px 9px;
-  background-image: url("/img/cover.jpg");
+  background-image: url("/media/img/cover.jpg");
   object-fit: cover;
   background-size: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  max-width: 500px;
   transform: rotateY(0);
   transform-origin: left;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
@@ -47,11 +55,12 @@ body{
   border-right:2px solid black;
   border-bottom:2px solid black; */
   margin-bottom: 30px;;
+  margin-left: 440px;
 }
 
 #book:after {
   /* background-image: url("https://files.oaiusercontent.com/file-XUwNHWBiSM7P69gHaARFWn?se=2024-12-06T09%3A56%3A29Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddef71d44-77d1-4f26-b15a-ad04d01cf1dd.webp&sig=RDxOOZTr5JH9Uv2ZOZWDocaHlrp0PQFA6ReC4fbFFYA%3D"); */
-  background-image: url("./img/after.png");
+  background-image: url("../media/img/after.png");
   bottom: 0;
   content: '';
   left: -52px;
@@ -78,6 +87,7 @@ body{
   height: 617;
   z-index: -1000;
   visibility: var(--after-visibility, hidden);
+  object-position: right;
 }
 
 #cover::before {
@@ -143,7 +153,7 @@ body{
 #cover p{
   font-size: 2em;
   font-weight: bold;
-  padding: 50px;
+  padding: 30px;
   text-align: center;
   font-family: "Walter", "EB Garamond", serif;
   color: #fae4df;
@@ -224,12 +234,12 @@ body{
 #btn-container{
   display: flex;
   justify-content: space-between;
-  width: 350px;
+  width: 500px;
 }
 
 .button{
   font-family: "Cartoon", "EB Garamond", serif;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   width: 100px;
   height: 40px;
   border-radius: 20px;
@@ -260,7 +270,7 @@ body{
 }
 
 .submit-btn{
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
   color: black;
   margin-top: 10px;
   font-family: "Cartoon", "EB Garamond", serif;
@@ -307,8 +317,8 @@ label {
   width: 600px;
   height: 600px ;
   position: absolute;
-  left: 100px;
-  bottom: -140px;
+  left: 95px;
+  bottom: -170px;
   visibility: hidden;
   z-index: -1;
   transform-origin: left;
@@ -326,7 +336,7 @@ label {
   height: 600px ;
   transform: rotate(20deg);
   position: absolute;
-  bottom: -200px;
+  bottom: -220px;
   transform-origin: left;
   visibility: hidden;
   z-index: -1;
@@ -375,8 +385,13 @@ label {
   user-select: none;
   position: absolute;
   top: 100px;
-  left: 130px;
+  left: 140px;
   opacity: 0.3;
   z-index: -1;
   font-size: 15em !important;
+}
+
+#open{
+  position: absolute;
+  right: 25%
 }
