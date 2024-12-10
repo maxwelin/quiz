@@ -256,7 +256,7 @@ export default class Render{
     this.setImgSrc(correctStamp, wrongStamp, hand, thumb, img, imgUrl)
     this.createAnswerForm(page, options, this.pageCount, correctAnswer, answerP, id)
     page.append(correctAnswer, timerP, answerP, img, correctStamp, wrongStamp, hand, thumb)
-
+    
     document.getElementById("book").appendChild(page)
   }
 
@@ -308,8 +308,8 @@ export default class Render{
   }
 
   createScorePage = () => {
-    const p = this.createElementWithInnerText("p", "YOUR SCORE:")
     const page = this.createElementWithAttribute("div", "class", "page")
+    const p = this.createElementWithInnerText("p", "YOUR SCORE:")
     const scoreP = this.createElementWithAttribute("p", "id", "score-p")
     const img = this.createElementWithAttribute("img", "src", "https://t4.ftcdn.net/jpg/05/54/92/31/360_F_554923137_sPoJU7BtsnuglnG4bTFs7KZR9wUNSxhO.jpg")
 

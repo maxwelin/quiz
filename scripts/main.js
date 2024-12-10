@@ -10,7 +10,6 @@ const render = new Render(formValidator, quizState)
 render.createBook()
 render.createButtons()
 
-
 function getRandomQuizQuestion(){
   let questionsToRender = []
 
