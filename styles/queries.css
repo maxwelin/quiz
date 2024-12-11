@@ -1,8 +1,9 @@
-@media screen and (width < 1200px) {
+@media screen and (width < 1250px) {
 
   #root{
     width: 800px;
     height: 640px;
+    margin: 20vh 10vw;
   }
   
   #book{
@@ -83,7 +84,7 @@
 
   .timer{
     font-size: 11em !important;
-    top: 140px;
+    top: 130px;
     left: 115px
   }
 
@@ -95,203 +96,213 @@
 @media screen and (width < 900px) {
 
   #root {
-    width: 640px;
-    height: 512px;
-}
+  width: 90vw;
+  height: 512px;
+  margin: 20vh 1vw;
+  }
 
-#book {
+  #book {
     grid-template-columns: 256px 25.6px;
     grid-template-rows: 5.76px 384px 5.76px;
     margin-left: 281.6px;
-}
+  }
 
-#book:after {
+  #book:after {
     height: 394.4px;
     width: 33.28px;
     left: -33.28px;
-}
+  }
 
-#title {
+  #title {
     font-size: 3.2em;
-}
+  }
 
-#cover p {
+  #cover p {
     font-size: 1.44em;
     padding: 0px;
-}
+  }
 
-.page {
+  .page {
     height: 384px;
     width: 256px;
-}
+  }
 
-.page p {
+  .page p {
     font-size: 1.408em;
     padding: 3.2px;
-}
+  }
 
-.page label {
+  .page label {
     padding: 3.2px;
     font-size: 1.152em;
-}
+  }
 
-.answer-form {
+  .answer-form {
     margin-bottom: 12.8px;
-}
+  }
 
-.button {
+  .button {
     width: 64px;
     height: 25.6px;
     font-size: 0.896em;
-}
+  }
 
-.submit-btn {
+  .submit-btn {
     width: 64px;
     height: 25.6px;
     font-size: 0.896em;
-}
+  }
 
-.stamp {
+  .stamp {
     width: 384px;
     height: 384px;
     left: 64px;
     bottom: -120px
-}
+  }
 
-.hand {
+  .hand {
     width: 384px;
     height: 384px;
     bottom: -152px;
-}
+  }
 
-.thumb {
+  .thumb {
     width: 384px;
     height: 384px;
     bottom: 40px;
     left: 64px;
-}
+  }
 
-#score-p {
+  #score-p {
     font-size: 1.92em;
-}
+  }
 
-.timer {
+  .timer {
     font-size: 8.8em !important;
     top: 112px;
     left: 92px;
-}
+  }
 
-#btn-container {
+  #btn-container {
     width: 320px;
-}
+  }
 }
 
 @media screen and (width < 730px) {
 
   #root {
-    width: 500px;
+    width: 95vw;
     height: 512px;
-    align-items: start;
-    margin: 0 0;
-    margin-top: 20vh;
-}
+    align-items: center;
+    margin: 20vh 0;
+  }
 
-#book {
+  #book {
     grid-template-columns: 256px 25.6px;
     grid-template-rows: 5.76px 384px 5.76px;
     margin-left: 20vw;
-}
+  }
 
-#book:after {
+  #book:after {
     height: 394.4px;
     width: 33.28px;
     left: -33.28px;
-}
+  }
 
-#title {
+  #title {
     font-size: 3.2em;
-}
+  }
 
-#cover p {
+  #cover p {
     font-size: 1.44em;
     padding: 0px;
-}
+  }
 
-#cover::after{
-  width: 10px;
-}
+  #cover::after{
+    width: 10px;
+  }
 
-#cover::before{
-  width: 10px;
-}
+  #cover::before{
+    width: 10px;
+  }
 
-.page {
+  .page {
     height: 384px;
     width: 256px;
-}
+  }
 
-.page p {
+  .page p {
     font-size: 1.408em;
     padding: 3.2px;
-}
+  }
 
-.page label {
+  .page label {
     padding: 3.2px;
     font-size: 1.152em;
-}
+  }
 
-.answer-form {
+  .answer-form {
     margin-bottom: 12.8px;
-}
+  }
 
-.button {
+  .button {
     width: 64px;
     height: 25.6px;
     font-size: 0.896em;
-}
+  }
 
-.submit-btn {
-    width: 64px;
-    height: 25.6px;
-    font-size: 0.896em;
-}
+  .submit-btn {
+      width: 64px;
+      height: 25.6px;
+      font-size: 0.896em;
+  }
 
-.stamp {
+  .stamp {
     width: 384px;
     height: 384px;
     left: 64px;
     bottom: -120px
-}
+  }
 
-.hand {
+  .hand {
     width: 384px;
     height: 384px;
     bottom: -152px;
-}
+  }
 
-.thumb {
+  .thumb {
     width: 384px;
     height: 384px;
     bottom: 40px;
     left: 64px;
-}
+  }
 
-#score-p {
+  #score-p {
     font-size: 1.92em;
-}
+  }
 
-.timer {
+  .timer {
     font-size: 8.8em !important;
     top: 112px;
     left: 92px;
-}
+  }
 
-#btn-container {
+  #btn-container {
     width: 200px;
-    margin-left: 20vw
-}
+    margin-left: 5vw
+  }
 
-#open{
-  right: 40%
+  #open{
+    right: 40%
+  }
 }
+  @media screen and (width < 500px) {
+  #root {
+    width: 96vw;
+    margin: 20vh 0;
+  }
+
+  #book {
+    margin-left: 5vh;
+  }
 }

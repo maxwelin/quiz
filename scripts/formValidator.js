@@ -7,6 +7,7 @@ export default class FormValidator{
     this.hmm = new Audio("../media/sounds/hmm.m4a")
     this.nice = new Audio("../media/sounds/nice.mp3")
     this.clap = new Audio("../media/sounds/clap.wav")
+    this.okay = new Audio("../media/sounds/okay.wav")
     this.slap = new Audio("../media/sounds/punch.wav")
     this.buzzer = new Audio("../media/sounds/buzzer.wav")
     this.jingle = new Audio("../media/sounds/success.mp3")
@@ -97,7 +98,11 @@ export default class FormValidator{
 
     setTimeout(() => {
       document.getElementById(`hand-${id}`).classList.remove("active")
-    }, 450)
+    }, 500)
+
+    setTimeout(() => {
+      next.click()
+    }, 1000)
   }
 
   playSlapSound(){

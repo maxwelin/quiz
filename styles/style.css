@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: Walter;
   src: url("../media/fonts/walter/Walter.ttf");
@@ -20,6 +19,7 @@ body{
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
+  overflow: hidden;
 }
 
 #root{
@@ -28,7 +28,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 5vw 15vw;
+  margin: 20vh 20vw;
   width: 1000px;
   height: 800px;
   background: rgba(255, 255, 255, 0.44);
@@ -36,199 +36,6 @@ body{
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-}
-
-#book{
-  position: relative;
-  display: grid;
-  grid-template-columns: 400px 40px;
-  grid-template-rows: 9px 600px 9px;
-  background-image: url("/media/img/cover.jpg");
-  object-fit: cover;
-  background-size: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  transform: rotateY(0);
-  transform-origin: left;
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
-  /* border-top:2px solid black;
-  border-right:2px solid black;
-  border-bottom:2px solid black; */
-  margin-bottom: 30px;;
-  margin-left: 440px;
-}
-
-#book:after {
-  /* background-image: url("https://files.oaiusercontent.com/file-XUwNHWBiSM7P69gHaARFWn?se=2024-12-06T09%3A56%3A29Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddef71d44-77d1-4f26-b15a-ad04d01cf1dd.webp&sig=RDxOOZTr5JH9Uv2ZOZWDocaHlrp0PQFA6ReC4fbFFYA%3D"); */
-  background-image: url("../media/img/after.png");
-  bottom: 0;
-  content: '';
-  left: -52px;
-  position: absolute;
-  top: 0px;
-  width: 52px;
-  height: 617px;
-  z-index: -10000;
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
-  /* border-top:2px solid black;
-  border-left: 2px solid black;
-  border-bottom:2px solid black; */
-  /* border-right:13px solid rgba(0, 0, 0, 0.1); */
-}
-
-#cover::after {
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 0;
-  content: '';
-  left: -20px;
-  position: absolute;
-  top: 0px;
-  width: 20px;
-  height: 617;
-  z-index: -1000;
-  visibility: var(--after-visibility, hidden);
-  object-position: right;
-}
-
-#cover::before {
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 0;
-  content: '';
-  left: 0px;
-  position: absolute;
-  top: 0;
-  width: 20px;
-  z-index: 1;
-  visibility: var(--after-visibility, hidden);
-}
-
-#cover{
-  max-width: 100%;
-  max-height: 100%;
-  background-color: #fdf7d9;
-  color: white;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  z-index: 1;
-  transform-origin: left;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: -15px 15px 10px rgba(0, 0, 0, 0.5);
-  /* border-top:1px solid black;
-  border-right:1px solid black;
-  border-bottom:1px solid black; */
-}
-
-#cover img{
-  position: absolute;
-  opacity: 1;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  user-select: none;
-  z-index: -1;
-  object-fit: cover;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-#title{
-  font-size: 5em;
-  padding: 50px;
-  text-align: center;
-  font-family: "Walter", "EB Garamond", serif;
-  color: #fae4df;
-  text-align: center;
-  text-shadow: 
-    0 0 5px #f997ce,  
-    0 0 10px #f997ce, 
-    0 0 20px #f997ce,
-    0 0 40px #f997ce,
-    0 0 80px #f997ce;
-}
-
-#cover p{
-  font-size: 2em;
-  font-weight: bold;
-  padding: 30px;
-  text-align: center;
-  font-family: "Walter", "EB Garamond", serif;
-  color: #fae4df;
-  text-align: center;
-  text-shadow: 
-  0 0 5px #f997ce,  
-    0 0 10px #f997ce, 
-    0 0 20px #f997ce,
-    0 0 40px #f997ce,
-    0 0 80px #f997ce;
-}
-
-.page{
-  position: relative;
-  width: 400px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(240, 216, 161, 0.95));
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: inset 50px 0px 70px rgba(0, 0, 0, 0.2), 4px 3px 5px rgba(0, 0, 0, 0.1);
-  color: black;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  transform: rotateY(0);
-  transform-origin: left;
-}
-
-.page p{
-  padding: 5px;
-  text-align: center;
-  font-size: 2.2em;
-  font-family: "Cartoon";
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-#answer-p{
-  font-size: 3.5em;
-}
-
-.page label{
-  padding: 5px;
-  text-align: center;
-  font-size: 1.8em;
-  font-family: "Cartoon", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin-bottom: 10px;
-}
-
-.page:before{
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background: url("https://www.transparenttextures.com/patterns/old-map.png") repeat; 
-  opacity: 0.3; 
-  pointer-events: none; 
-}
-
-.flip{
-  transform: translateX(-2px) rotateY(-180deg);
-  user-select: none;
-  transition: transform 0.6s ease-in-out;
-}
-
-.flip-back{
-  transform: translateX(2px) rotateY(360);
-  transition: transform 0.6s ease-in-out;
-}
-
-.flipped{
-  z-Index: -100 !important;
 }
 
 #btn-container{
@@ -253,10 +60,6 @@ body{
 .button:hover{
   transform: scale(1.05);
   cursor: pointer;
-}
-
-#back{
-  visibility: hidden;
 }
 
 .hidden{
@@ -312,69 +115,18 @@ label {
   border-radius: 10px;
 }
 
-.stamp{
-  opacity: 1;
-  width: 600px;
-  height: 600px ;
-  position: absolute;
-  left: 95px;
-  bottom: -170px;
-  visibility: hidden;
-  z-index: -1;
-  transform-origin: left;
+#score-page{
+  position: relative;
 }
-
-.stamp.active{
-  transform: scale(0.35);
-  transition: transform 0.3s;
-  visibility: visible !important;
-}
-
-.hand{
-  opacity: 1;
-  width: 600px;
-  height: 600px ;
-  transform: rotate(20deg);
-  position: absolute;
-  bottom: -220px;
-  transform-origin: left;
-  visibility: hidden;
-  z-index: -1;
-}
-
-.hand.active{
-  transform: scale(0.5);
-  transition: transform 0.3s;
-  visibility: visible !important;
-}
-
-.thumb{
-  opacity: 1;
-  width: 600px;
-  height: 600px ;
-  transform: rotate(50deg);
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
-  transform-origin: bottom;
-  visibility: hidden;
-  z-index: -1;
-}
-
-.thumb.active{
-  transform: scale(0.4);
-  transition: transform 0.3s;
-  visibility: visible !important;
-}
-
 
 #score-page img{
-  top: 0;
   position: absolute;
-  object-fit: cover;
-  opacity: 0.1 !important;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
 }
 
 #score-p{
@@ -384,7 +136,7 @@ label {
 .timer{
   user-select: none;
   position: absolute;
-  top: 100px;
+  top: 130px;
   left: 140px;
   opacity: 0.3;
   z-index: -1;

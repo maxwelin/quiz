@@ -1,11 +1,49 @@
-export default class Render{
-  constructor(formValidator, quizState){
+export default class DOMManager{
+  constructor(formValidator, util){
     this.formValidator = formValidator
-    this.quizState = quizState
+    this.util = util
   }
 
   root = document.getElementById("root")
-  pageCount = 10
+  pageCount = null
+
+  newGame = () => {
+    const book = document.getElementById("book"),
+          open = document.getElementById("open"),
+          back = document.getElementById("back"),
+          flip = document.getElementById("next"),
+          again = document.getElementById("again")
+
+    this.util.finished = false;
+    this.util.score = 0;
+    this.pageCount = 10;
+
+    flip.classList.add("hidden")
+    back.classList.add("hidden")
+    again.classList.add("hidden")
+    open.classList.remove("hidden")
+    
+    back.setAttribute("disabled", true)
+    flip.setAttribute("disabled", true)
+    
+    while (book.children.length > 0) {
+      book.firstElementChild.remove()
+    }
+    this.createQuiz()
+  }
+  
+  createQuiz = () => {
+    let quizQuestions = this.util.getRandomQuizQuestion()
+    
+    this.util.fetchQuiz().then((quiz) => {
+      this.createScorePage()
+      for (let i = 0; i < 10; i++) {
+        let rnd = quizQuestions[i]
+        this.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img, [i])
+      }
+      this.createCover()
+    })
+  }
   
   createElementWithAttribute = (element, attributeType, attributeValue) => {
     const e = document.createElement(`${element}`)
@@ -14,7 +52,7 @@ export default class Render{
   }
 
   createElementWithInnerText = (element, innerText) => {
-    const e = document.createElement(`${element}`)
+    const e = document.createElement(element)
     e.innerText = `${innerText}`
     return e
   }
@@ -34,14 +72,12 @@ export default class Render{
 
   createButtons = () => {
     const btnContainer = this.createElementWithAttribute("div", "id", "btn-container")
-    const flipPageBtn = this.createButton("button", "id", "next", "Next🠊", "button", this.flipPage)
-    const flipPageBack = this.createButton("button", "id", "back", "🠈Back", "button", this.flipBack)
     const openBookBtn = this.createButton("button", "id", "open", "Start", "button", this.openBook)
+    const againBtn = this.createButton("button", "id", "again", "Restart", "button", this.newGame)
+    const flipPageBtn = this.createButton("button", "id", "next", "Next🠊", "button", this.flipPage)
+    const flipPageBackBtn = this.createButton("button", "id", "back", "🠈Back", "button", this.flipBack)
 
-    flipPageBtn.classList.add("hidden")
-    flipPageBtn.setAttribute("disabled", true)
-
-    btnContainer.append(flipPageBack, openBookBtn, flipPageBtn)
+    btnContainer.append(flipPageBackBtn, againBtn, openBookBtn, flipPageBtn)
     this.root.appendChild(btnContainer)
  }
 
@@ -56,6 +92,10 @@ export default class Render{
 
     cover.append(title, img, p)
     document.getElementById("book").appendChild(cover)
+  }
+
+  placeholder = () => {
+    console.log("new game started")
   }
   
   openBook = () => {
@@ -72,7 +112,7 @@ export default class Render{
       document.querySelector("#cover h1").style.visibility = "hidden"
     }, 150)
 
-    document.getElementById("open").remove()
+    document.getElementById("open").classList.add("hidden")
     document.getElementById("next").classList.remove("hidden")
   }
   
@@ -114,8 +154,9 @@ export default class Render{
     if(book.children[this.pageCount - 1].id == "score-page"){
       this.getScore()
       this.stopCountdown()
-      this.quizState.finished = true;
-      document.getElementById("back").style.visibility = "visible"
+      this.util.finished = true;
+      document.getElementById("back").classList.remove("hidden")
+      document.getElementById("again").classList.remove("hidden")
     }
 
     nextBtn.setAttribute("disabled", true)
@@ -126,7 +167,7 @@ export default class Render{
 
     setTimeout(() => {
       this.lowerOpacityOnFlip(book)
-        if(this.quizState.finished){
+        if(this.util.finished){
           nextBtn.removeAttribute("disabled")
           backBtn.removeAttribute("disabled")
         }
@@ -194,8 +235,8 @@ export default class Render{
   }
 
   stopCountdown = () => {
-    clearInterval(this.quizState.clock);
-    this.quizState.clock = null;
+    clearInterval(this.util.clock);
+    this.util.clock = null;
   }
 
   countdown = (p) => {
@@ -204,7 +245,7 @@ export default class Render{
     let timer = 10
 
     if(p){
-      this.quizState.clock = setInterval(() => {
+      this.util.clock = setInterval(() => {
         if(timer < 4){
           p.style.color = "red"
         }
@@ -213,7 +254,7 @@ export default class Render{
         timer -= 1
         
         if(timer < 0){
-          clearInterval(this.quizState.clock)
+          clearInterval(this.util.clock)
           this.formValidator.timesUp(p.id.slice(-1), )
         }
       }, 1000)
@@ -266,6 +307,11 @@ export default class Render{
         sound.volume = 0.3
         sound.play()
       }, 800)
+    } else if(sound == this.formValidator.okay){
+      setTimeout(() => {
+        sound.volume = 0.1
+        sound.play()
+      }, 600)
     } else {
       setTimeout(() => {
         sound.volume = 0.2
@@ -277,41 +323,47 @@ export default class Render{
   getScore = () => {
     const scoreParagraph = document.getElementById("score-p")
     let comment = ""
-    const score = this.quizState.score
-    switch (true) {
-      case score === 0:
-        comment = "Did you even try?\n\nEmbarrassing.."
-        this.playSound(this.formValidator.aww)
-        break
-      case score < 5:
-        comment = "Impressive...\n\nTry again and do better!"
+    const score = this.util.score
+    if(!this.util.finished){
+    
+      switch (true) {
+        case score === 0:
+          comment = "Did you even try?\n\nEmbarrassing.."
+          this.playSound(this.formValidator.aww)
+          break
+          case score < 5:
+            comment = "Impressive...\n\nTry again and do better!"
         this.playSound(this.formValidator.clap)
         break
-      case score === 5:
-        comment = "Meh\n\nKeep practicing and you'll improve."
-        this.playSound(this.formValidator.hmm)
-        break
-      case score === 6 || score === 7:
-        comment = "Great effort,\nyou scored above average.\n\nKeep practicing!"
+        case score === 5:
+          comment = "Meh\n\nKeep practicing and you'll improve."
+          this.playSound(this.formValidator.hmm)
+          this.playSound(this.formValidator.clap)
+          break
+          case score === 6 || score === 7:
+            comment = "Great effort,\nyou scored above average.\n\nNot bad!"
+            this.playSound(this.formValidator.okay)
+            this.playSound(this.formValidator.applause)
+            break
+            case score === 8 || score === 9:
+              comment = "Great job,\nyou're getting there.\n\nKeep it up!"
+        this.playSound(this.formValidator.wow)
         this.playSound(this.formValidator.applause)
         break
-      case score === 8 || score === 9:
-        comment = "Great job,\nyou're getting there.\n\nKeep it up!"
-        this.playSound(this.formValidator.wow)
-        break
-      case score === 10:
-        comment = "Perfect score,\nyou nailed it!\n\nNice."
-        this.playSound(this.formValidator.nice)
-        break
+        case score === 10:
+          comment = "Perfect score,\nyou nailed it!\n\nNice."
+          this.playSound(this.formValidator.nice)
+          break
+        }
+        scoreParagraph.innerText = `${this.util.score} / 10\n\n${comment}`
     }
-    scoreParagraph.innerText = `${this.quizState.score} / 10\n\n${comment}`
   }
-
+      
   createScorePage = () => {
     const page = this.createElementWithAttribute("div", "class", "page")
     const p = this.createElementWithInnerText("p", "YOUR SCORE:")
     const scoreP = this.createElementWithAttribute("p", "id", "score-p")
-    const img = this.createElementWithAttribute("img", "src", "https://t4.ftcdn.net/jpg/05/54/92/31/360_F_554923137_sPoJU7BtsnuglnG4bTFs7KZR9wUNSxhO.jpg")
+    const img = this.createElementWithAttribute("img", "src", "https://i.pinimg.com/736x/12/cf/61/12cf617f448c04012caf3c50b77614fc.jpg")
 
     page.id = "score-page"
 

@@ -1,0 +1,54 @@
+.stamp{
+  opacity: 1;
+  width: 600px;
+  height: 600px ;
+  position: absolute;
+  left: 95px;
+  bottom: -170px;
+  visibility: hidden;
+  z-index: -1;
+  transform-origin: left;
+}
+
+.stamp.active{
+  transform: scale(0.35);
+  transition: transform 0.3s;
+  visibility: visible !important;
+}
+
+.hand{
+  opacity: 1;
+  width: 600px;
+  height: 600px ;
+  transform: rotate(20deg);
+  position: absolute;
+  bottom: -220px;
+  transform-origin: left;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.hand.active{
+  transform: scale(0.5);
+  transition: transform 0.3s;
+  visibility: visible !important;
+}
+
+.thumb{
+  opacity: 1;
+  width: 600px;
+  height: 600px ;
+  transform: rotate(50deg);
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  transform-origin: bottom;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.thumb.active{
+  transform: scale(0.4);
+  transition: transform 0.3s;
+  visibility: visible !important;
+}

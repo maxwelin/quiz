@@ -1,0 +1,64 @@
+.page{
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(240, 216, 161, 0.95));
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: inset 50px 0px 70px rgba(0, 0, 0, 0.2), 4px 3px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  transform: rotateY(0);
+  transform-origin: left;
+}
+
+.page p{
+  padding: 5px;
+  text-align: center;
+  font-size: 2.2em;
+  font-family: "Cartoon";
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#answer-p{
+  font-size: 3.5em;
+}
+
+.page label{
+  padding: 5px;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: "Cartoon", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.page:before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: url("https://www.transparenttextures.com/patterns/old-map.png") repeat; 
+  opacity: 0.3; 
+  pointer-events: none; 
+}
+
+.flip{
+  transform: translateX(-2px) rotateY(-180deg);
+  user-select: none;
+  transition: transform 0.6s ease-in-out;
+}
+
+.flip-back{
+  transform: translateX(2px) rotateY(360);
+  transition: transform 0.6s ease-in-out;
+}
+
+.flipped{
+  z-Index: -100 !important;
+}
