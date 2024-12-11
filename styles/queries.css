@@ -3,7 +3,7 @@
   #root{
     width: 800px;
     height: 640px;
-    margin: 20vh 10vw;
+    margin: 12vh 10vw;
   }
   
   #book{
@@ -98,7 +98,7 @@
   #root {
   width: 90vw;
   height: 512px;
-  margin: 20vh 1vw;
+  margin: 12vh 1vw;
   }
 
   #book {
@@ -194,7 +194,7 @@
     width: 95vw;
     height: 512px;
     align-items: center;
-    margin: 20vh 0;
+    margin: 12vh 0;
   }
 
   #book {
@@ -299,7 +299,7 @@
   @media screen and (width < 500px) {
   #root {
     width: 96vw;
-    margin: 20vh 0;
+    margin: 12vh 0;
   }
 
   #book {
