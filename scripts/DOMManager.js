@@ -263,9 +263,9 @@ export default class DOMManager{
 
   setImgSrc = (correctStamp, wrongStamp, hand, thumb, img, imgUrl) => {
     correctStamp.setAttribute("src", "../media/img/correct.png")
-    correctStamp.className = "stamp"
+    correctStamp.className = "correct-stamp"
     wrongStamp.setAttribute("src", "../media/img/wrong.png")
-    wrongStamp.className = "stamp"
+    wrongStamp.className = "wrong-stamp"
     hand.setAttribute("src", "../media/img/hand.png")
     hand.className = "hand"
     thumb.setAttribute("src", "../media/img/thumb.png")

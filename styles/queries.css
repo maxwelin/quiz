@@ -58,24 +58,31 @@
     font-size: 1.12em;
   }
 
-  .stamp{
-    width: 480px;
-    height: 480px;
-    left: 78px;
-    bottom: -140px;
+  .wrong-stamp{
+    width: 280px;
+    height: 280px;
+    left: 87px;
+    bottom: -38px;
+  }
+  
+  .correct-stamp{
+    width: 416px;
+    height: 416px;
+    left: 95px;
+    bottom: -110px;
   }
 
   .hand{
-    width: 480px;
-    height: 480px;
-    bottom: -190px;
+    width: 320px;
+    height: 320px;
+    bottom: -115px;
   }
 
   .thumb{
-    width: 480px;
-    height: 480px;
+    width: 320px;
+    height: 320px;
     bottom: 50px;
-    left: 80px;
+    right: 125px;
   }
 
   #score-p{
@@ -153,24 +160,31 @@
     font-size: 0.896em;
   }
 
-  .stamp {
-    width: 384px;
-    height: 384px;
-    left: 64px;
-    bottom: -120px
+  .wrong-stamp {
+    width: 224px;
+    height: 224px;
+    left: 70px;
+    bottom: -43px
+  }
+  
+  .correct-stamp {
+    width: 332.8px;
+    height: 332.8px;
+    left: 75px;
+    bottom: -100px
   }
 
   .hand {
-    width: 384px;
-    height: 384px;
-    bottom: -152px;
+    width: 256px;
+    height: 256px;
+    bottom: -105px;
   }
 
   .thumb {
-    width: 384px;
-    height: 384px;
-    bottom: 40px;
-    left: 64px;
+    width: 256px;
+    height: 256px;
+    bottom: 30px;
+    right: 100px;
   }
 
   #score-p {
@@ -257,24 +271,31 @@
       font-size: 0.896em;
   }
 
-  .stamp {
+  .wrong-stamp {
+    width: 224px;
+    height: 224px;
+    left: 70px;
+    bottom: -43px
+  }
+  
+  .correct-stamp {
     width: 384px;
     height: 384px;
-    left: 64px;
+    left: 71px;
     bottom: -120px
   }
 
   .hand {
-    width: 384px;
-    height: 384px;
-    bottom: -152px;
+    width: 256px;
+    height: 256px;
+    bottom: -105px;
   }
 
   .thumb {
-    width: 384px;
-    height: 384px;
-    bottom: 40px;
-    left: 64px;
+    width: 204.8px;
+    height: 204.8px;
+    bottom: 30px;
+    right: 100px;
   }
 
   #score-p {

@@ -19,7 +19,7 @@ body{
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #root{
@@ -126,6 +126,7 @@ label {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0.1;
 }
 
