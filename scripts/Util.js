@@ -2,7 +2,8 @@
 export default class Util{
   score = 0
   clock = null
-  finished = false;
+  finished = false
+  quizAnswers = []
 
   fetchQuiz = async function(){
     const response = await fetch("./quiz.json")
@@ -10,16 +11,16 @@ export default class Util{
     return quiz
   }
 
-  getRandomQuizQuestion = () => {
-    let quizQuestions = []
+  getRandomNumbers = () => {
+    let randomNumberArray = []
   
-    while(quizQuestions.length < 10){
+    while(randomNumberArray.length < 10){
       const rnd = Math.floor(Math.random() * 81) + 1
     
-      if(!quizQuestions.includes(rnd)){
-        quizQuestions.push(rnd)
+      if(!randomNumberArray.includes(rnd)){
+        randomNumberArray.push(rnd)
       }
     }
-    return quizQuestions
+    return randomNumberArray
   }
 }

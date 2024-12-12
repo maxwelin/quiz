@@ -139,7 +139,7 @@
   },
   {
     "question": "In which Disney movie is the character 'Cruz Ramirez' featured?",
-    "options": ["Cars 3", "Cars 2", "Cars", "Finding Dory"],
+    "options": ["Cars 3", "Cars 2", "Cars", "Fast & Furious"],
     "answer": "Cars 3",
     "img": "https://ih1.redbubble.net/image.389381522.9522/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u5.jpg"
   },
@@ -151,8 +151,8 @@
   },
   {
     "question": "Who are the parents of the twins in The Incredibles?",
-    "options": ["Helen and Bob Parr", "Fred and Mary Parr", "Dash and Violet", "Lucius and Edna"],
-    "answer": "Helen and Bob Parr",
+    "options": ["Helen and Bob", "Fred and Mary", "Dash and Violet", "Lucius and Edna"],
+    "answer": "Helen and Bob",
     "img": "https://64.media.tumblr.com/82b79a23a79746751ea3d49c51f95977/032d491e3be8381e-d8/s640x960/edfe013b1f2630c84cb20b1eb02cdec4adb0451d.pnj"
   },
   {

@@ -9,23 +9,23 @@ export default class DOMManager{
 
   newGame = () => {
     const book = document.getElementById("book"),
-          open = document.getElementById("open"),
-          back = document.getElementById("back"),
-          flip = document.getElementById("next"),
-          again = document.getElementById("again")
+      openBtn = document.getElementById("open"),
+      backBtn = document.getElementById("back"),
+      nextBtn = document.getElementById("next"),
+      againBtn = document.getElementById("again")
 
     this.util.finished = false;
     this.util.score = 0;
-    this.pageCount = 10;
+    this.pageCount = 11;
 
-    flip.classList.add("hidden")
-    back.classList.add("hidden")
-    again.classList.add("hidden")
-    open.classList.remove("hidden")
+    nextBtn.classList.add("hidden")
+    backBtn.classList.add("hidden")
+    againBtn.classList.add("hidden")
+    openBtn.classList.remove("hidden")
     
-    back.setAttribute("disabled", true)
-    flip.setAttribute("disabled", true)
-    
+    backBtn.setAttribute("disabled", true)
+    // nextBtn.setAttribute("disabled", true)
+
     while (book.children.length > 0) {
       book.firstElementChild.remove()
     }
@@ -33,28 +33,32 @@ export default class DOMManager{
   }
   
   createQuiz = () => {
-    let quizQuestions = this.util.getRandomQuizQuestion()
+    let randomNumberArray = this.util.getRandomNumbers()
     
     this.util.fetchQuiz().then((quiz) => {
       this.createScorePage()
-      for (let i = 0; i < 10; i++) {
-        let rnd = quizQuestions[i]
-        this.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].answer, quiz[rnd].img, [i])
+      
+      const maxNumberOfQuestions = 10
+      for (let i = 0; i < maxNumberOfQuestions; i++) {
+        let rnd = randomNumberArray[i]
+        this.util.quizAnswers[i] = quiz[rnd].answer
+        this.createPage(quiz[rnd].question, quiz[rnd].options, quiz[rnd].img, [i])
       }
+      this.createInstructionPage()
       this.createCover()
     })
   }
   
   createElementWithAttribute = (element, attributeType, attributeValue) => {
-    const e = document.createElement(`${element}`)
-    e.setAttribute(`${attributeType}`, `${attributeValue}`)
-    return e
+    const elem = document.createElement(`${element}`)
+    elem.setAttribute(`${attributeType}`, `${attributeValue}`)
+    return elem
   }
 
   createElementWithInnerText = (element, innerText) => {
-    const e = document.createElement(element)
-    e.innerText = `${innerText}`
-    return e
+    const elem = document.createElement(element)
+    elem.innerText = `${innerText}`
+    return elem
   }
   
   createBook = () => {
@@ -72,7 +76,7 @@ export default class DOMManager{
 
   createButtons = () => {
     const btnContainer = this.createElementWithAttribute("div", "id", "btn-container")
-    const openBookBtn = this.createButton("button", "id", "open", "Start", "button", this.openBook)
+    const openBookBtn = this.createButton("button", "id", "open", "Open", "button", this.openBook)
     const againBtn = this.createButton("button", "id", "again", "Restart", "button", this.newGame)
     const flipPageBtn = this.createButton("button", "id", "next", "Next🠊", "button", this.flipPage)
     const flipPageBackBtn = this.createButton("button", "id", "back", "🠈Back", "button", this.flipBack)
@@ -94,10 +98,6 @@ export default class DOMManager{
     document.getElementById("book").appendChild(cover)
   }
 
-  placeholder = () => {
-    console.log("new game started")
-  }
-  
   openBook = () => {
     const book = document.getElementById("book")
     const cover = document.getElementById("cover")
@@ -117,28 +117,34 @@ export default class DOMManager{
   }
   
   lowerOpacityOnFlip = (book) => {
-    if(book.children[this.pageCount + 1].querySelector(".active")){
-      book.children[this.pageCount + 1].querySelector(".active").style.opacity = "0.1"
+    const currentPage = book.children[this.pageCount + 1]
+
+    if(currentPage.querySelector(".active")){
+      currentPage.querySelector(".active").style.opacity = "0.1"
     }
 
-    book.children[this.pageCount + 1].style.color = "rgba(0, 0, 0, 0.1)"
-    book.children[this.pageCount + 1].style.zIndex = `${-this.pageCount}`
+    currentPage.style.color = "rgba(0, 0, 0, 0.1)"
+    currentPage.style.zIndex = `${-this.pageCount}`
 
-    if(book.children[this.pageCount + 1].childNodes[1]){
-      book.children[this.pageCount + 1].childNodes[1].style.opacity = "0.1"
+    if(currentPage.childNodes[1]){
+      currentPage.childNodes[1].style.opacity = "0.1"
     }
   }
 
   increaseOpacityOnFlipBack = (book) => {
-    if(book.children[this.pageCount].querySelector(".active")){
-      book.children[this.pageCount].querySelector(".active").style.opacity = "1"
+    const previousPage = book.children[this.pageCount]
+
+    if(previousPage.querySelector(".active")){
+      previousPage.querySelector(".active").style.opacity = "1"
     }
 
-    book.children[this.pageCount].style.color = "rgba(0, 0, 0, 1)"
-    book.children[this.pageCount].style.zIndex = 0
+    previousPage.style.color = "rgba(0, 0, 0, 1)"
+    previousPage.style.zIndex = 0
 
-    if(book.children[this.pageCount].childNodes[1]){
-      book.children[this.pageCount].childNodes[1].style.opacity = "1"
+    if (previousPage.id == "instruction-page") {
+      previousPage.childNodes[1].style.opacity = "0.1"
+    } else if(previousPage.childNodes[1]){
+      previousPage.childNodes[1].style.opacity = "1"
     }
   }
 
@@ -146,24 +152,26 @@ export default class DOMManager{
     const book = document.getElementById("book")
     const nextBtn = document.getElementById("next")
     const backBtn = document.getElementById("back")
-
-    if(!book.children[this.pageCount - 1]){
+    
+    const currentPage = book.children[this.pageCount]
+    const nextPage = book.children[this.pageCount - 1]
+    if(!nextPage){
       return
     } 
 
-    if(book.children[this.pageCount - 1].id == "score-page"){
+    if(nextPage.id == "score-page"){
       this.getScore()
       this.stopCountdown()
       this.util.finished = true;
       document.getElementById("back").classList.remove("hidden")
       document.getElementById("again").classList.remove("hidden")
     }
-
+    
     nextBtn.setAttribute("disabled", true)
     backBtn.setAttribute("disabled", true)
 
-    book.children[this.pageCount].classList.add("flip")
-    this.countdown(book.children[this.pageCount - 1].querySelector(".timer"))
+    currentPage.classList.add("flip")
+    this.countdown(nextPage.querySelector(".timer"))
 
     setTimeout(() => {
       this.lowerOpacityOnFlip(book)
@@ -181,15 +189,17 @@ export default class DOMManager{
     const nextBtn = document.getElementById("next")
     const backBtn = document.getElementById("back")
 
-    if(book.children[this.pageCount + 1].id == "cover"){
+    const previousPage = book.children[this.pageCount + 1]
+
+    if(previousPage.id == "cover"){
       return
     }else{
       nextBtn.setAttribute("disabled", true)
       backBtn.setAttribute("disabled", true)
 
-      book.children[this.pageCount + 1].classList.remove("flip")
-      book.children[this.pageCount + 1].classList.remove("flipped")
-      book.children[this.pageCount + 1].classList.add("flip-back")
+      previousPage.classList.remove("flip")
+      previousPage.classList.remove("flipped")
+      previousPage.classList.add("flip-back")
       
       setTimeout(() => {
         this.increaseOpacityOnFlipBack(book)
@@ -201,7 +211,8 @@ export default class DOMManager{
   }
 
   createRadioButtons(form, pageIndex, options){
-    for (let i = 0; i < 4; i++) {
+    const answerOptions = 4
+    for (let i = 0; i < answerOptions; i++) {
       const container = document.createElement("div")
       
       const radioBtn = this.createElementWithAttribute("input", "type", "radio")
@@ -239,23 +250,22 @@ export default class DOMManager{
     this.util.clock = null;
   }
 
-  countdown = (p) => {
+  countdown = (timerParagraphElement) => {
     this.stopCountdown()
 
-    let timer = 10
-
-    if(p){
+    if(timerParagraphElement){
+      let timer = 10
       this.util.clock = setInterval(() => {
         if(timer < 4){
-          p.style.color = "red"
+          timerParagraphElement.style.color = "red"
         }
         
-        p.innerText = timer
+        timerParagraphElement.innerText = timer
         timer -= 1
         
         if(timer < 0){
           clearInterval(this.util.clock)
-          this.formValidator.timesUp(p.id.slice(-1), )
+          this.formValidator.timesUpEvent(timerParagraphElement.id.slice(-1), )
         }
       }, 1000)
     }
@@ -273,30 +283,29 @@ export default class DOMManager{
     img.setAttribute("src", imgUrl)
   }
 
-  createPage = (question, options, answer, imgUrl, id) => {
-    const answerP = this.createElementWithInnerText("p", `${answer}`),
-          page = this.createElementWithAttribute("div", "class", "page"),
-          hand = this.createElementWithAttribute("img", "id", `hand-${id}`),
-          thumb = this.createElementWithAttribute("img", "id", `thumb-${id}`),
-          timerP = this.createElementWithAttribute("p", "id", `timer-p-${id}`),
-          questionP = this.createElementWithAttribute("p", "id", "questions-p"),
-          img = this.createElementWithAttribute("img", "id", "background-image"),
-          correctAnswer = this.createElementWithInnerText("p", "Correct answer:"),
-          wrongStamp = this.createElementWithAttribute("img", "id", `wrong-stamp-${id}`),
-          correctStamp = this.createElementWithAttribute("img", "id", `correct-stamp-${id}`)
+  createPage = (question, options, imgUrl, id) => {
+    const answerP = this.createElementWithInnerText("p", ""),
+      page = this.createElementWithAttribute("div", "class", "page"),
+      hand = this.createElementWithAttribute("img", "id", `hand-${id}`),
+      thumb = this.createElementWithAttribute("img", "id", `thumb-${id}`),
+      timerParagraph = this.createElementWithAttribute("p", "id", `timer-p-${id}`),
+      questionP = this.createElementWithAttribute("p", "id", "questions-p"),
+      backgroundImage = this.createElementWithAttribute("img", "id", "background-image"),
+      correctAnswer = this.createElementWithInnerText("p", "Correct answer:"),
+      wrongStamp = this.createElementWithAttribute("img", "id", `wrong-stamp-${id}`),
+      correctStamp = this.createElementWithAttribute("img", "id", `correct-stamp-${id}`)
 
-    timerP.className = "timer"
+    timerParagraph.className = "timer"
     questionP.innerText = `${question}`
     page.append(questionP)
     
     correctAnswer.id = `correct-answer-p-${id}`
     answerP.id = `answer-p-${id}`
     correctAnswer.style.visibility = "hidden"
-    answerP.style.visibility = "hidden"
 
-    this.setImgSrc(correctStamp, wrongStamp, hand, thumb, img, imgUrl)
+    this.setImgSrc(correctStamp, wrongStamp, hand, thumb, backgroundImage, imgUrl)
     this.createAnswerForm(page, options, this.pageCount, correctAnswer, answerP, id)
-    page.append(correctAnswer, timerP, answerP, img, correctStamp, wrongStamp, hand, thumb)
+    page.append(correctAnswer, timerParagraph, answerP, backgroundImage, correctStamp, wrongStamp, hand, thumb)
     
     document.getElementById("book").appendChild(page)
   }
@@ -325,31 +334,35 @@ export default class DOMManager{
     let comment = ""
     const score = this.util.score
     if(!this.util.finished){
-    
       switch (true) {
         case score === 0:
           comment = "Did you even try?\n\nEmbarrassing.."
           this.playSound(this.formValidator.aww)
           break
-          case score < 5:
-            comment = "Impressive...\n\nTry again and do better!"
-        this.playSound(this.formValidator.clap)
-        break
+
+        case score < 5:
+          comment = "Impressive...\n\nTry again and do better!"
+          this.playSound(this.formValidator.clap)
+          break
+
         case score === 5:
           comment = "Meh\n\nKeep practicing and you'll improve."
           this.playSound(this.formValidator.hmm)
           this.playSound(this.formValidator.clap)
           break
-          case score === 6 || score === 7:
-            comment = "Great effort,\nyou scored above average.\n\nNot bad!"
-            this.playSound(this.formValidator.okay)
-            this.playSound(this.formValidator.applause)
-            break
-            case score === 8 || score === 9:
-              comment = "Great job,\nyou're getting there.\n\nKeep it up!"
-        this.playSound(this.formValidator.wow)
-        this.playSound(this.formValidator.applause)
-        break
+
+        case score === 6 || score === 7:
+          comment = "Great effort,\nyou scored above average.\n\nNot bad!"
+          this.playSound(this.formValidator.okay)
+          this.playSound(this.formValidator.applause)
+          break
+
+        case score === 8 || score === 9:
+          comment = "Great job,\nyou're getting there.\n\nKeep it up!"
+          this.playSound(this.formValidator.wow)
+          this.playSound(this.formValidator.applause)
+          break
+
         case score === 10:
           comment = "Perfect score,\nyou nailed it!\n\nNice."
           this.playSound(this.formValidator.nice)
@@ -361,13 +374,24 @@ export default class DOMManager{
       
   createScorePage = () => {
     const page = this.createElementWithAttribute("div", "class", "page")
-    const p = this.createElementWithInnerText("p", "YOUR SCORE:")
+    const title = this.createElementWithInnerText("p", "YOUR SCORE:")
     const scoreP = this.createElementWithAttribute("p", "id", "score-p")
     const img = this.createElementWithAttribute("img", "src", "https://i.pinimg.com/736x/12/cf/61/12cf617f448c04012caf3c50b77614fc.jpg")
 
     page.id = "score-page"
 
-    page.append(p, scoreP, img)
+    page.append(title, scoreP, img)
+    document.getElementById("book").appendChild(page)
+  }
+
+  createInstructionPage = () => {
+    const page = this.createElementWithAttribute("div", "class", "page")
+    const paragraph = this.createElementWithAttribute("p", "id", "instructions")
+    const img = this.createElementWithAttribute("img", "src", "https://lumiere-a.akamaihd.net/v1/images/eu_xx_wdw_eu_generic_ticket_po_b07f4dd0.jpeg?region=0,0,800,920")
+    paragraph.innerText = "How much do you know about Disney?\n\nAnswer 10 Disney-themed questions, each with 4 options.\n\nYou have 10 seconds to choose your answer for each question.\n\nGood luck!"
+    page.id = "instruction-page"
+
+    page.append(paragraph, img)
     document.getElementById("book").appendChild(page)
   }
 }
