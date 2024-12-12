@@ -229,7 +229,7 @@
   },
   {
     "question": "Which Disney movie has the song 'Under the Sea'?",
-    "options": ["The Little Mermaid", "Pocahontas", "Beauty and the Beast", "Aladdin"],
+    "options": ["The Little Mermaid", "Finding Nemo", "Aquaman", "Aladdin"],
     "answer": "The Little Mermaid",
     "img": "https://thumbs.dreamstime.com/b/question-marks-cartoon-multicolor-illustration-faq-help-interrogation-signs-hand-drawn-element-140114221.jpg"
   },

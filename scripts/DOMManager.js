@@ -99,11 +99,8 @@ export default class DOMManager{
   }
 
   openBook = () => {
-    const book = document.getElementById("book")
     const cover = document.getElementById("cover")
     cover.classList.add("flip")
-
-    this.countdown(book.children[this.pageCount].querySelector(".timer"))
 
     setTimeout(() => {
       cover.classList.add("flipped")
